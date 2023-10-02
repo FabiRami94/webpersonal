@@ -12,13 +12,10 @@ const Home = () => {
                     <p>Desarrolador Full Satck, Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae similique 
                         neque assumenda doloremque dolore iure consectetur ducimus corporis illum 
                         labore architecto alias, cumque illo odio nulla at. Autem, quas doloribus.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae similique 
-                        neque assumenda doloremque dolore iure consectetur ducimus corporis illum 
-                        labore architecto alias, cumque illo odio nulla at. Autem, quas doloribus.</p>
                 </div>
                 <div className={styles.divImagen}>
                     <img alt="PorfesionalImage"/>
-                    <h1>imagen</h1>
+                    <h1>imagen Logo</h1>
                 </div>
             </body>            
         </>

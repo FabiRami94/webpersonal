@@ -18,10 +18,10 @@ const Skills = () => {
                             name = {habilidad.name}
                             icon = {habilidad.icon}
                             link = {habilidad.link}
+                            width = {habilidad.width}
                     ></Skill>
                 ))}
             </div>
-
         </div>
     )
 };
