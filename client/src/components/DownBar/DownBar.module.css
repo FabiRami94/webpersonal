@@ -1,0 +1,16 @@
+
+.divGeneral{
+    background-color : #215669;
+}
+
+.generalContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+
+.buttonMedia{
+    margin: 10px;
+    color: #49b4b2;
+    size: 10px;
+}

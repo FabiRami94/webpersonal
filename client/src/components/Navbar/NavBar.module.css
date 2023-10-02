@@ -1,0 +1,40 @@
+
+.linksStyles {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.linksStyles:hover {
+    color: #49b4b2;
+}
+
+.divLinks {   
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    padding-right: 50px;
+}
+
+.mainStyle{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #001b2a;
+}
+
+.generalContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttonMedia{
+    margin: 4px;
+    color: #49b4b2;  
+}
