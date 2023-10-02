@@ -18,8 +18,6 @@ class Portafolio extends React.Component {
                 <h1>Building Trade</h1>
                 <h1>Proyecto individual</h1>
                 <h1>Proyecto grupal</h1>
-                <h1>Venta llaveros pri</h1>
-                <h1>Venta Shannen</h1>
             </div>       
         </div>
         )

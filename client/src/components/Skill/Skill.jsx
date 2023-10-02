@@ -6,8 +6,7 @@ const Skill = ({image, name, icon, link, width}) => {
     <div>
         <div>  
             <div className={styles.divGeneral} style={{ textAlign: 'center' }}>     
-            <div style={{ textAlign: 'center' }}>
-                
+            <div style={{ textAlign: 'center' }}>           
                 <img src={image} alt="Skill Programing" style={{width: width}}/> 
             </div>
                 <h1 className={styles.textStyle}>{name}</h1>               
