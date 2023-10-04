@@ -1,28 +1,27 @@
 import React from "react";
+import styles from "./Portafolio.module.css";
+import {    PiArrowFatLinesLeftFill,
+            PiArrowFatLeftFill,
+            PiArrowFatLinesRightFill,
+            PiArrowFatRightFill } from "react-icons/pi"
 
-class Portafolio extends React.Component {
-    // constructor(){
 
-    // }
 
-    render(){
-        return (
-            <div>
-            <div>
-                <h1 style={{display: 'flex', justifyContent: 'center'}}>
-                    <span style={{color: 'white'}}>Mis</span>&nbsp;
-                    <span style={{color: '#49b4b2'}}>Proyectos</span></h1>
+const Portafolio = () => {
+
+    return(
+        <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'row'}}>
+            <button className={styles.button1}><PiArrowFatLinesLeftFill size={40}/></button>
+            <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'row'}}>
+                <button className={styles.button2}><PiArrowFatLeftFill size={25}/></button>
+                <div className={styles.divLateral}></div>
+                <div className={styles.divCentral}></div>
+                <div className={styles.divLateral}></div>
+                <button className={styles.button2}><PiArrowFatRightFill size={25}/></button>
             </div>
-            <div>
-                <h1>Rick and Morty</h1>
-                <h1>Building Trade</h1>
-                <h1>Proyecto individual</h1>
-                <h1>Proyecto grupal</h1>
-            </div>       
+            <button className={styles.button1}><PiArrowFatLinesRightFill size={40}/></button>
         </div>
-        )
-    }
+    )
 }
 
-
-export default Portafolio;
+export default Portafolio

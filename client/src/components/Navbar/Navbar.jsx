@@ -16,25 +16,25 @@ const NavBar = () => {
                     className={styles.linksStyles} 
                     to='home'
                     smooth={true} 
-                    offset={200} 
+                    offset={-110} 
                     duration={500}>Home</Link>
                 <Link 
                     className={styles.linksStyles} 
                     to='acerca'
                     smooth={true} 
-                    offset={200} 
+                    offset={-120} 
                     duration={500}>Acerca/Experiencia</Link>
                 <Link 
                     className={styles.linksStyles} 
                     to='habilidades' 
                     smooth={true} 
-                    offset={200} 
+                    offset={-150} 
                     duration={500}>Habilidades</Link>
                 <Link 
                     className={styles.linksStyles} 
                     to='portafolio' 
                     smooth={true} 
-                    offset={200} 
+                    offset={-140} 
                     duration={500}>Portafolio</Link>
                 <Link 
                     className={styles.linksStyles} 
