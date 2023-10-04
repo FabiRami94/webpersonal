@@ -14,8 +14,7 @@ const Home = () => {
                         labore architecto alias, cumque illo odio nulla at. Autem, quas doloribus.</p>
                 </div>
                 <div className={styles.divImagen}>
-                    <img alt="PorfesionalImage"/>
-                    <h1>imagen Logo</h1>
+                    <img  className={styles.imagen} alt="PorfesionalImage" src="https://i.ibb.co/0Ym1m6s/imagen-Superior.jpg"/>
                 </div>
             </body>            
         </>
