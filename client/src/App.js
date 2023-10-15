@@ -11,7 +11,7 @@ import Skills from './components/Skills/Skills';
 function App() {
   return (
     <div style={{background: '#215669', minHeight: '100vh',}}>
-      <header style={{position: 'sticky', top: '0'}}>
+      <header style={{position: 'sticky', top: '0', zIndex: '2'}}>
         <NavBar></NavBar>
       </header>
       <main>
