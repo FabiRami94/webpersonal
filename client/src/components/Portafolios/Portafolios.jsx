@@ -78,11 +78,12 @@ class Portafolios extends React.Component {
         const { imageShow, proyectCounter } = this.state;
 
         return (
+          <div style={{backgroundColor: 'rgb(8, 28, 41, 0.4)', padding: '50px'}}>
             <div className={styles.divGeneral}>
                 <div>
                     <h1 style={{display: 'flex', justifyContent: 'center'}}>
                         <span style={{color: 'white', marginTop: '20px'}}>Mis</span>&nbsp;
-                        <span style={{color: '#49b4b2', marginTop: '45px'}}>Proyectos</span></h1>
+                        <span style={{color: '#08AAEA', marginTop: '45px'}}>Proyectos</span></h1>
                 </div>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <span
@@ -129,6 +130,7 @@ class Portafolios extends React.Component {
                     </span>
                 </div>
             </div>  
+          </div>
         )
     }
 }

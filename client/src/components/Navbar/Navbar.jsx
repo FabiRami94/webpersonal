@@ -34,7 +34,7 @@ const NavBar = () => {
                     className={styles.linksStyles} 
                     to='portafolio' 
                     smooth={true} 
-                    offset={-140} 
+                    offset={-60} 
                     duration={500}>Portafolio</Link>
                 <Link 
                     className={styles.linksStyles} 

@@ -6,11 +6,11 @@ import habilidadesProgramacion from  '../../utils/dataHabilidades';
 const Skills = () => {
 
     return(
-        <div>
+        <div style={{backgroundColor: 'rgb(8, 28, 41, 0.4)'}}>
             <div>
-                <h1 style={{display: 'flex', justifyContent: 'center'}}>
+                <h1 style={{display: 'flex', justifyContent: 'center', marginTop: '0px', paddingTop: '10px'}}>
                     <span style={{color: 'white'}}>Mis</span>&nbsp;
-                    <span style={{color: '#49b4b2'}}>Habilidades</span></h1>
+                    <span style={{color: '#00AEF6'}}>Habilidades</span></h1>
             </div>
             <div className={styles.Skills}>
                 {habilidadesProgramacion.map((habilidad) => (  

@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(33, 86, 105);
+    background-color: rgb(8, 28, 41, 0.4);
 }
 
 .divTexto{
@@ -21,6 +21,6 @@
 .divImagen {
     border-radius: 30px;
     margin: 50px;
-    background-color: #001b2a;   
+    background-color: rgba(8, 28, 41, 0.4);
 }
 

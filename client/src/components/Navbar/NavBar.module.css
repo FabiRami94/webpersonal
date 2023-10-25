@@ -9,7 +9,7 @@
 }
 
 .linksStyles:hover {
-    color: #49b4b2;
+    color: rgb(0, 174, 246);
 }
 
 .divLinks {   
@@ -25,7 +25,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background-color: #001b2a;
+    background-color: rgb(8, 28, 41);
 }
 
 .generalContainer{
@@ -36,5 +36,10 @@
 
 .buttonMedia{
     margin: 4px;
-    color: #49b4b2;  
+    color: white;  
+}
+
+.buttonMedia:hover{
+    margin: 4px;
+    color: rgb(0, 174, 246);
 }

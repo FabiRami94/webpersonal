@@ -11,13 +11,13 @@ export default function About () {
                 </div>
                 <div className={styles.divTexto}>
                     <h1>Fabián Ramírez</h1>
-                    <h4 style={{color: '#49b4b2'}}>Full Stack Developer</h4>
-                    <p>Desarrolador Full Satck, Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae similique 
-                        neque assumenda doloremque dolore iure consectetur ducimus corporis illum 
-                        labore architecto alias, cumque illo odio nulla at. Autem, quas doloribus.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae similique 
-                        neque assumenda doloremque dolore iure consectetur ducimus corporis illum 
-                        labore architecto alias, cumque illo odio nulla at. Autem, quas doloribus.</p>
+                    <h4 style={{color: '#00AEF6'}}>Full Stack Developer</h4>
+                    <p>Programador enfocado en el desarrollo web como Full Satck Developer. 
+                        Mis conocimientos incluyen metodologías agiles, GIT, además de experiencia 
+                        práctica en el desarrollo de Front-end y Back-end utilizando tecnologías 
+                        como JavaScript, HTML, CSS, React, Node.js, Express, Postgres y Sequelize. </p>
+                    <p>Mis habilidades blandas incluyen capacidad de trabajo en equipo, pensamiento 
+                        analítico, adaptabilidad, aprendizaje rápido y creatividad, entre otros.</p>
                 </div>
             </body>      
     )
