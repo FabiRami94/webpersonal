@@ -1,13 +1,13 @@
+
 import React from "react";
 import styles from "./About.module.css"
 
 export default function About () {
 
     return(
-        <body className={styles.divGeneral}>
-                <div className={styles.divImagen}>
-                    <img alt="PorfesionalImage"/>
-                    <h1>imagen foto</h1>
+        <body className={styles.divCompleto}>
+                <div style={{width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <img className={styles.image} src={'https://i.ibb.co/cYj6Lw6/Foto-profesional.jpg'} alt="PorfesionalImage"/>
                 </div>
                 <div className={styles.divTexto}>
                     <h1>Fabián Ramírez</h1>
@@ -19,6 +19,6 @@ export default function About () {
                     <p>Mis habilidades blandas incluyen capacidad de trabajo en equipo, pensamiento 
                         analítico, adaptabilidad, aprendizaje rápido y creatividad, entre otros.</p>
                 </div>
-            </body>      
+        </body>      
     )
 }

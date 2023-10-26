@@ -1,11 +1,22 @@
 
 .divGeneral{
-    background-color: rgb(8, 28, 41, 0.4);
+    background-color: rgb(8, 28, 41, 0.4); 
+}
+
+.divSecundario{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center
 }
+
+    @media (max-width: 768px) {
+        .divSecundario{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }   
 
 .buttonMedia{
     margin: 5px;

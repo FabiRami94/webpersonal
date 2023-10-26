@@ -7,6 +7,19 @@
     text-align: center;
 }
 
+.divSecundario{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    margin-bottom: 20px;
+}
+
+    @media (max-width: 768px) {
+        .divSecundario{
+            flex-direction: column;
+        }
+    }
+
 .iconos{
     color: rgb(0, 174, 246);
 }
@@ -25,9 +38,17 @@
     font-size: medium;
     padding: 10px;
     border-radius: 30px;
+    margin-top: 20px;
+    width: 100px;
 }
 
-.button:hover{
+    @media (max-width: 768px) {
+        .button{
+            margin-bottom: 20px;
+        }
+    }
+
+.button:not(:disabled):hover{
     background-color: white;
     color: rgb(0, 174, 246)
 }
@@ -36,4 +57,11 @@
     width: 350px;
     border-radius: 10px;
     border: 1px solid rgb(0, 174, 246);
+}
+
+.errorsLetter{
+    font-size: 10px;
+    margin: 0px;
+    color: #f2f2f2;
+    text-align: right;
 }

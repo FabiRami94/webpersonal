@@ -8,6 +8,12 @@
     cursor: pointer;
 }
 
+    @media (max-width: 768px) {
+        .linksStyles{
+            margin: 5px;
+        }
+    }
+
 .linksStyles:hover {
     color: rgb(0, 174, 246);
 }
@@ -19,6 +25,14 @@
     padding-right: 50px;
 }
 
+    @media (max-width: 768px) {
+        .divLinks{
+            flex-wrap: wrap;
+            justify-content: space-evenly;  
+            padding-left: 50px;      
+        }
+    }
+
 .mainStyle{
     display: flex;
     flex-direction: row; 
@@ -27,6 +41,12 @@
     height: 100px;
     background-color: rgb(8, 28, 41);
 }
+
+    @media (max-width: 768px) {
+        .mainStyle{
+            height: 130px;
+        }
+    }
 
 .generalContainer{
     display: flex;
@@ -43,3 +63,14 @@
     margin: 4px;
     color: rgb(0, 174, 246);
 }
+
+.nombreGit{
+    color: white;
+    padding-left: 50px
+}
+
+    @media (max-width: 768px) {
+        .nombreGit{
+            display: none;
+        }
+    }

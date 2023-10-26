@@ -4,19 +4,19 @@ import { Link } from 'react-scroll';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 
-const NavBar = () => {
-
+const NavBar = () => {  
+    
     return(
         <main className={styles.mainStyle}>
             <div>
-                <h1 style={{color: 'white', paddingLeft: '50px'}}>FabiRami94.</h1>
+                <h1 className={styles.nombreGit}>FabiRami94.</h1>
             </div>
             <div className={styles.divLinks}>
                 <Link 
                     className={styles.linksStyles} 
                     to='home'
-                    smooth={true} 
-                    offset={-110} 
+                    smooth={true}
+                    offset={-120}
                     duration={500}>Home</Link>
                 <Link 
                     className={styles.linksStyles} 
