@@ -1,10 +1,28 @@
 
+.divPrincipal{
+    background-color: rgb(8, 28, 41, 0.4); 
+    padding: 50px;
+}
+
+    @media (max-width: 768px) {
+        .divPrincipal{
+        padding: 80px 15px 50px 15px;
+        }
+    }
+
 .divGeneral{
     margin: 50px;
     height: 600px;
     background-color: rgb(8, 28, 41, 0.6);
     border-radius: 30px;
 }
+
+    @media (max-width: 768px) {
+        .divGeneral{
+        margin: 2px;
+        height: 500px;
+        }
+    }
 
 .principalContainer{
     display: flex;
@@ -14,6 +32,13 @@
     /* background-color: rgba(100, 202, 233, 0.459); */
     margin: 0px auto;
   }
+
+    @media (max-width: 768px) {
+        .principalContainer{
+        height: 300px;
+        width: 80%;
+        }
+    }
   
 .secondaryContainer{
     height: 380px;
@@ -23,6 +48,13 @@
     border-radius: 30px;
     overflow: hidden;
 }
+
+    @media (max-width: 768px) {
+        .secondaryContainer{
+            height: 280px;
+            width: 300px;
+        }
+    }
   
 .carruseles{
     width: 500%;
@@ -42,8 +74,14 @@
     height: 100%;
     border-radius: 30px;
     box-shadow: 0px -5px 5px 1px rgba(0, 0, 0, 0.6);
-    object-fit: cover;
+    object-fit: fill;
 }
+
+    @media (max-width: 768px) {
+        .image{
+            object-fit:cover;
+        }
+    }
   
 .flechaizquierda1{
     display: flex; 
@@ -55,6 +93,14 @@
     margin-left: 40px;
     user-select: none;
 }
+
+    @media (max-width: 768px) {
+        .flechaizquierda1{
+        font-size: 100px;
+        margin-left: 0px;
+        transform: translate(0, 30%);
+        }
+    }
   
 .flechaizquierda1:hover,
 .flechaderecha1:hover,
@@ -73,6 +119,14 @@
     margin-right: 40px;
     user-select: none;
 }
+
+    @media (max-width: 768px) {
+        .flechaderecha1{
+        font-size: 100px;
+        margin-right: 0px;
+        transform: translate(0, 30%);
+        }
+    }
   
 .flechaizquierda2{
     display: flex; 
@@ -83,6 +137,13 @@
     transform: translate(0, 20%);
     user-select: none;
 }
+
+    @media (max-width: 768px) {
+        .flechaizquierda2{
+        font-size: 60px;
+        margin: 5px;
+        }
+    }
   
 .flechaderecha2{
     display: flex; 
@@ -93,3 +154,10 @@
     transform: translate(0, 20%);
     user-select: none;
 }
+
+    @media (max-width: 768px) {
+        .flechaderecha2{
+        font-size: 60px;
+        margin: 5px;
+        }
+    }

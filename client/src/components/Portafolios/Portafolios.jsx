@@ -78,7 +78,7 @@ class Portafolios extends React.Component {
         const { imageShow, proyectCounter } = this.state;
 
         return (
-          <div style={{backgroundColor: 'rgb(8, 28, 41, 0.4)', padding: '50px'}}>
+          <div className={styles.divPrincipal}>
             <div className={styles.divGeneral}>
                 <div>
                     <h1 style={{display: 'flex', justifyContent: 'center'}}>
@@ -128,6 +128,9 @@ class Portafolios extends React.Component {
                         onClick={this.onClickHandlerProyect}
                         className={styles.flechaderecha1}>&#8250;
                     </span>
+                </div>
+                <div style={{textAlign: 'center'}}>
+                  <span style={{ color: 'white', fontWeight: 'bold'}}>Links Soon...</span>
                 </div>
             </div>  
           </div>
