@@ -3,19 +3,19 @@ export const data = [
     {
       PROYECTO1: [
       {
-        id: 1, imgUrl: "https://i.ibb.co/0h9r2zh/Rick-And-Morty1.png"
+        id: 1, imgUrl: "https://i.ibb.co/kX53YDK/Rick-And-Morty1.png"
       },
       {
-        id: 2, imgUrl: "https://i.ibb.co/7v78cHP/Rick-And-Morty2.png"
+        id: 2, imgUrl: "https://i.ibb.co/MDV0Lgr/Rick-And-Morty2.png"
       },
       {
-        id: 3, imgUrl: "https://i.ibb.co/Lk7mtzG/Rick-And-Morty3.png"
+        id: 3, imgUrl: "https://i.ibb.co/GspvHLd/Rick-And-Morty3.png"
       },
       {
-        id: 4, imgUrl: "https://i.ibb.co/0QNYhGp/Rick-And-Morty4.png"
+        id: 4, imgUrl: "https://i.ibb.co/gRvtwwb/Rick-And-Morty4.png"
       },
       {
-        id: 5, imgUrl: "https://i.ibb.co/pnkF6Nc/Rick-And-Morty5.png"
+        id: 5, imgUrl: "https://i.ibb.co/NKqxvMd/Rick-And-Morty5.png"
       }]
     },
     {

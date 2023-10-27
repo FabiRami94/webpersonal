@@ -5,6 +5,7 @@ import { IoLocation } from 'react-icons/io5';
 import { HiOutlinePhone } from 'react-icons/hi';
 import validation from "../../assets/validation.js"
 import axios from "axios";
+import {alertError, alertSuccess} from "../../assets/alerts.js"
 
 export default function Contact () {
 
@@ -25,14 +26,12 @@ export default function Contact () {
     const onChangeHandler = (event) => {
 
         setNewIInput({...newInput, [event.target.name] : event.target.value})
-        console.log(event.target.value)
         validation(
             {...newInput, [event.target.name]: event.target.value}, 
             event.target.name, 
             setErrors, 
             errors
         );
-        console.log(errors)
     }
 
     const buttonDisable = () => {
@@ -48,8 +47,10 @@ export default function Contact () {
 
     const submitHandler = async (event) => {
         event.preventDefault();    
-        try {    
-            await axios.post('http://localhost:3001/correo/enviar', newInput).then(res => alert('Mensaje enviado con éxito'));
+        try { 
+
+            await axios.post(
+                'http://localhost:3001/correo/enviar', newInput).then(data => alertSuccess());
 
             setNewIInput({
                 nombre: "",
@@ -61,9 +62,20 @@ export default function Contact () {
                 correo: "Campo obligatorio*",
                 mensaje: "Campo obligatorio*",
             });
+
         } catch (error) {
-            window.alert({error: error.message});
-            window.location.reload();
+            alertError();
+            // window.location.reload();
+            setNewIInput({
+                nombre: "",
+                correo: "",
+                mensaje: "",
+            });
+            setErrors({
+                nombre: "Campo obligatorio*",
+                correo: "Campo obligatorio*",
+                mensaje: "Campo obligatorio*",
+            });
         }
     }
 
@@ -83,10 +95,12 @@ export default function Contact () {
                             marginTop: '10px'}}>
                             <label className={style.generalText}>Nombre:</label>
                             <input 
-                                onChange={onChangeHandler} 
-                                name="nombre" 
-                                className={style.input} 
+                                id="nombre"
                                 type="text" 
+                                name="nombre" 
+                                onChange={onChangeHandler} 
+                                value={newInput.nombre}
+                                className={style.input} 
                                 placeholder="Escribe un nombre..."></input>
                         </div>
                         <p className={style.errorsLetter}>{errors.nombre}</p>
@@ -96,22 +110,26 @@ export default function Contact () {
                             marginTop: '10px'}}>
                             <label className={style.generalText}>Correo:</label>
                             <input
-                                onChange={onChangeHandler} 
+                                id="correo"
+                                type="text" 
                                 name="correo" 
+                                value={newInput.correo}
+                                onChange={onChangeHandler} 
                                 style={{marginLeft: '12px'}}
                                 className={style.input} 
-                                type="text" 
                                 placeholder="Escribe un correo..."></input>
                         </div>
                         <p className={style.errorsLetter}>{errors.correo}</p>
                         <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
                             <label className={style.generalText}>Mensaje:</label>
                             <textarea
-                                onChange={onChangeHandler}
+                                id="mensaje"
+                                type="text" 
                                 name="mensaje"
+                                value={newInput.mensaje}
+                                onChange={onChangeHandler}
                                 rows="4" cols="60"
                                 className={style.input} 
-                                type="text" 
                                 placeholder="Escribe un mensaje..."></textarea>
                         </div>
                         <p className={style.errorsLetter}>{errors.mensaje}</p>

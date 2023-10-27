@@ -18,3 +18,12 @@
     font-size: 30px;
 }
 
+.buttonMedia{
+    color: white;  
+}
+
+.buttonMedia:hover{
+    margin-top: 4px;
+    color: rgb(0, 174, 246);
+}
+

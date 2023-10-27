@@ -1,7 +1,7 @@
 import React from "react";
 import Skill from "../Skill/Skill";
 import styles from './Skills.module.css';
-import habilidadesProgramacion from  '../../utils/dataHabilidades';
+import habilidadesProgramacion from  '../../assets/dataHabilidades.js';
 
 const Skills = () => {
 
