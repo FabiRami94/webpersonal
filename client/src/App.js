@@ -8,7 +8,7 @@ import Portafolios from './components/Portafolios/Portafolios';
 import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001/'
+axios.defaults.baseURL = 'https://webpersonal-production-cbc4.up.railway.app/'
 
 function App() {
   return (
