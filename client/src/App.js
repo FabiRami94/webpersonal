@@ -7,6 +7,8 @@ import About from './components/About/About';
 import Portafolios from './components/Portafolios/Portafolios';
 import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:3001/'
 
 function App() {
   return (

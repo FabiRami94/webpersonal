@@ -11,6 +11,7 @@
     @media (max-width: 768px) {
         .linksStyles{
             margin: 5px;
+            font-size: 16px;
         }
     }
 
@@ -29,7 +30,7 @@
         .divLinks{
             flex-wrap: wrap;
             justify-content: space-evenly;  
-            padding-left: 50px;      
+            padding-left: 50px;     
         }
     }
 
@@ -71,7 +72,7 @@
 
     @media (max-width: 768px) {
         .nombreGit{
-            padding-left: 20px;
-            font-size: 20px;
+            padding-left: 15px;
+            font-size: 18px;
         }
     }

@@ -23,6 +23,8 @@ export default function Contact () {
         mensaje: "Campo obligatorio*",
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const onChangeHandler = (event) => {
 
         setNewIInput({...newInput, [event.target.name] : event.target.value})
@@ -37,9 +39,10 @@ export default function Contact () {
     const buttonDisable = () => {
         let isDisable;
         for(let error in errors){
-            if(errors[error] === ""){
+            if(errors[error] === "" && isSubmitting === false){
                 isDisable = false
-            } else {isDisable = true; 
+            } else if(errors[error].length >= 1 || isSubmitting){
+                isDisable = true; 
                 break};
         } 
         return isDisable;
@@ -47,10 +50,11 @@ export default function Contact () {
 
     const submitHandler = async (event) => {
         event.preventDefault();    
+        setIsSubmitting(true);
         try { 
 
             await axios.post(
-                'http://localhost:3001/correo/enviar', newInput).then(data => alertSuccess());
+                '/correo/enviar', newInput).then(data => alertSuccess());
 
             setNewIInput({
                 nombre: "",
@@ -76,6 +80,8 @@ export default function Contact () {
                 correo: "Campo obligatorio*",
                 mensaje: "Campo obligatorio*",
             });
+        } finally {
+            setIsSubmitting(false); // Establecer isSubmitting en false después de la operación de envío
         }
     }
 
@@ -134,7 +140,9 @@ export default function Contact () {
                         </div>
                         <p className={style.errorsLetter}>{errors.mensaje}</p>
                         <div style={{alignItems: 'center'}}>
-                            <button  type="submit" disabled={buttonDisable()} className={style.button}>Enviar</button>
+                            <button  type="submit" disabled={buttonDisable()} className={style.button}>
+                                {isSubmitting ? 'Enviando...' : 'Enviar'}
+                            </button>
                         </div>
                     </form>
                     <div style={{

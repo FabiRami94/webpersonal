@@ -59,6 +59,12 @@
     border: 1px solid rgb(0, 174, 246);
 }
 
+    @media (max-width: 768px){
+        .input{
+            width: 180px;
+        }
+    }
+
 .errorsLetter{
     font-size: 10px;
     margin: 0px;
