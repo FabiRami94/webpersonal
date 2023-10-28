@@ -86,7 +86,7 @@ export default function Contact () {
     }
 
     return(
-        <div style={{backgroundColor: 'rgb(8, 28, 41, 0.4)', padding: '20px'}}>
+        <div style={{backgroundColor: 'rgb(8, 28, 41, 0.4)', padding: '20px 10px 20px 10px'}}>
             <div className={style.divGeneral}>     
                 <h1 style={{color: 'rgb(0, 174, 246)'}}>Contact</h1>
                 <div className={style.divSecundario}>

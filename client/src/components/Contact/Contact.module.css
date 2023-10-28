@@ -7,6 +7,12 @@
     text-align: center;
 }
 
+    @media(max-width: 768px){
+        .divGeneral{
+            margin: 20px 10px 20px 10px;
+        }
+    }
+
 .divSecundario{
     display: flex;
     flex-direction: row; 
@@ -61,7 +67,7 @@
 
     @media (max-width: 768px){
         .input{
-            width: 180px;
+            width: 80%;
         }
     }
 
