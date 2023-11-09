@@ -1,10 +1,18 @@
-import React from "react"
+
+import React, { useState } from "react"
 import styles from "./NavBar.module.css";
 import { Link } from 'react-scroll';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
-
+import './NavBar.module.css'
 
 const NavBar = () => {  
+
+    const [clicked, setClicked] = useState(false)
+    
+    const handleClick = () => {
+      setClicked(!clicked)
+    }
+    console.log(clicked)
     
     return(
         <main className={styles.mainStyle}>
@@ -50,6 +58,14 @@ const NavBar = () => {
                     <div className={styles.buttonMedia}><BsGithub size={20}/></div>
                 </a>           
                 </div>
+                {/* <div 
+                    onClick={handleClick}
+                    className={`${styles.navIcon5} ${clicked ? 'open' : ''}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className={`${styles.divBig} ${clicked ? ' active' : ''}`}></div> */}
             </div>
         </main>
     )
