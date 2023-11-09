@@ -2,6 +2,8 @@
 import React from "react";
 import styles from  "./Portafolios.module.css";
 import {data} from "../../assets/data.js"
+import WebLinks from "../WebLinks/WebLinks.jsx";
+import projectTechnologies from "../../assets/projectTechnologies.js";
 
 
 class Portafolios extends React.Component {
@@ -54,7 +56,7 @@ class Portafolios extends React.Component {
       moveToLeftProyect = () => {
         const { proyectCounter } = this.state;
         if (proyectCounter <= 1) {
-          this.setState({ proyectCounter: 3 });
+          this.setState({ proyectCounter: 4 });
         } else {
           this.setState((prevState) => ({
             proyectCounter: prevState.proyectCounter - 1,
@@ -64,7 +66,7 @@ class Portafolios extends React.Component {
     
       moveToRigthProyect = () => {
         const { proyectCounter } = this.state;
-        if (proyectCounter > 2) {
+        if (proyectCounter > 3) {
           this.setState({ proyectCounter: 1 });
         } else {
           this.setState((prevState) => ({
@@ -99,7 +101,7 @@ class Portafolios extends React.Component {
                         </span>
                         <div className={styles.secondaryContainer}>
                             <h2 style={{ color: 'white', margin: "5px", textAlign: "center" }}>
-                                {Object.keys(data[proyectCounter - 1])[0]}
+                                {data[proyectCounter - 1].NAME}
                             </h2>
                             <div
                                 className={styles.carruseles}
@@ -128,15 +130,23 @@ class Portafolios extends React.Component {
                         onClick={this.onClickHandlerProyect}
                         className={styles.flechaderecha1}>&#8250;
                     </span>
+                </div>             
+                  <p style={{textAlign: 'center', color: 'white'}}>
+                    Oprima para apreciar las tecnologías usadas y visitar cada proyectos.</p>          
+                <div className={styles.linkCards}>
+                  {projectTechnologies.map((proj) => (
+                    <WebLinks 
+                      key = {proj.id} 
+                      image = {proj.image}
+                      url = {proj.url}
+                      technologies = {proj.technologies}
+                    ></WebLinks>
+                  ))}
                 </div>
-                <div style={{textAlign: 'center'}}>
-                  <span style={{ color: 'white', fontWeight: 'bold'}}>Links Soon...</span>
-                </div>
-            </div>  
+            </div> 
           </div>
         )
     }
 }
-
 
 export default Portafolios;

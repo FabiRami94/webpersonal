@@ -1,7 +1,8 @@
+
 .Skills{
     padding: 10px 10px 10px 10px;
     display: flex;
-    flex-direction: Row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;

@@ -7,7 +7,7 @@
 
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
         .divGeneral{
             flex-direction: column;
         }
@@ -20,7 +20,7 @@
     color: white;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
         .divTexto{
             width: 80%;
             margin: 0 auto;
@@ -32,7 +32,7 @@
     border-radius: 30px;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
         .imagen{
             width: 300px;
             margin: 0px auto;
@@ -46,7 +46,7 @@
     background-color: rgba(8, 28, 41, 0.4);
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
         .divImagen{
             width: 300px;
             margin: 0 auto;

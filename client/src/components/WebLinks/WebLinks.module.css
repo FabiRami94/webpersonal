@@ -1,0 +1,62 @@
+
+.linkImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+.divLinksProjects{
+    position: relative;
+    width: 18rem;
+    height: 12rem;
+}
+
+.textDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%; 
+    border-radius: 15px;
+    top: 0; 
+    transform: translateX(0);
+    bottom: 0;
+    color: var(--primary-color);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.divLinksProjects:hover .textDescription {  
+    opacity: 1;
+}
+
+.divLinksProjects:hover {
+    transform: translateY(-20px); 
+}
+
+.button{
+    background-color: rgb(0, 174, 246);
+    color: white;
+    font-weight: 400;
+    font-size: small;
+    padding: 0.4rem;
+    border-radius: 30px;
+    margin-top: 5px;
+    width: 8rem;
+    cursor: pointer;
+}
+
+.TechnologiesCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start; 
+    padding: 0px;
+    margin: 10px 15px 0px 15px;
+}
