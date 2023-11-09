@@ -132,7 +132,7 @@ class Portafolios extends React.Component {
                     </span>
                 </div>             
                   <p style={{textAlign: 'center', color: 'white'}}>
-                    Oprima para apreciar las tecnologías usadas y visitar cada proyectos.</p>          
+                    Total de proyecto deployados: 1.</p>          
                 <div className={styles.linkCards}>
                   {projectTechnologies.map((proj) => (
                     <WebLinks 
@@ -143,6 +143,8 @@ class Portafolios extends React.Component {
                     ></WebLinks>
                   ))}
                 </div>
+                <p style={{textAlign: 'center', color: 'white', marginTop: '0px'}}>
+                    Oprima para apreciar las tecnologías usadas y visitar cada proyectos.</p>   
             </div> 
           </div>
         )

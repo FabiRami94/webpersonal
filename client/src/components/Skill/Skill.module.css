@@ -11,6 +11,21 @@
     border: 1px solid rgb(0, 174, 246);
 }
 
+.divGeneral:hover {
+    margin-top: 4px;
+    color: rgb(0, 174, 246);
+    .textStyle, .buttonMedia {
+        color: rgb(0, 174, 246);
+      }
+  }
+
+    @media(max-width: 768px){
+        .divGeneral{
+            width: 80px;
+            height: 110px;
+        }
+    }
+
 .textStyle{
     color: white;
     text-align: center;
@@ -18,12 +33,16 @@
     font-size: 30px;
 }
 
+    @media(max-width: 768px){
+        .textStyle{
+            font-weight: 500;
+            font-size: 15px;
+            margin: 6px;
+        }
+    }
+
 .buttonMedia{
     color: white;  
 }
 
-.buttonMedia:hover{
-    margin-top: 4px;
-    color: rgb(0, 174, 246);
-}
 

@@ -12,7 +12,7 @@
 
 .divGeneral{
     margin: 50px;
-    height: 800px;
+    height: 820px;
     background-color: rgb(8, 28, 41, 0.6);
     border-radius: 30px;
 }
@@ -26,7 +26,7 @@
     @media (max-width: 768px) {
         .divGeneral{
         margin: 5px;
-        height: 720px;
+        height: 740px;
         }
     }
 .principalContainer{
