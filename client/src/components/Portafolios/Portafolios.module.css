@@ -89,25 +89,28 @@
     font-size: 200px;
     cursor: pointer;
     color: white;
-    transform: translate(0, 20%);
+    transform: translate(0, 80%);
     margin-left: 40px;
     user-select: none;
+    height: 200px;
 }
 
 
     @media (max-width: 1080px) {
         .flechaizquierda1{
             font-size: 150px;
+            height: 150px;
             margin-left: 10px;
-            transform: translate(0, 30%);
+            transform: translate(0, 80%);
         }
     }
 
     @media (max-width: 768px) {
         .flechaizquierda1{
         font-size: 100px;
+        height: 100px;
         margin-left: 0px;
-        transform: translate(0, 30%);
+        transform: translate(0, 80%);
         }
     }
     
@@ -122,25 +125,28 @@
     font-size: 200px;
     cursor: pointer;
     color: white;
-    transform: translate(0, 20%);
+    transform: translate(0, 80%);
     margin-right: 40px;
     user-select: none;
+    height: 200px;
 }
 
 
     @media (max-width: 1080px) {
         .flechaderecha1{
             font-size: 150px;
-        margin-right: 10px;
-        transform: translate(0, 30%);
+            height: 150px;
+            margin-right: 10px;
+            transform: translate(0, 80%);
         }
     }
 
     @media (max-width: 768px) {
         .flechaderecha1{
         font-size: 100px;
+        height: 100px;
         margin-right: 0px;
-        transform: translate(0, 30%);
+        transform: translate(0, 80%);
         }
     }     
 

@@ -17,9 +17,8 @@ class Portafolios extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          imageShow: 0,
-          counter: 0,
           proyectCounter: 1,
+          imageCache: {},
         };
       }
 
@@ -52,11 +51,33 @@ class Portafolios extends React.Component {
             proyectCounter: prevState.proyectCounter + 1,
           }));
         }
-      };    
+      };  
+      
+      handleImageLoad = (event) => {
+        const { target } = event;
+        const imageURL = target.src;
+
+        this.setState({
+          imageCache: {
+            ...this.state.imageCache,
+            [imageURL]: target,
+          },
+        });
+      };
+    
+      handleProjectChange = (newProjectCounter) => {
+        this.setState({
+          proyectCounter: newProjectCounter,
+        });
+    
+        this.setState({
+          imageCache: {},
+        });
+      };
 
     render(){
 
-        const { imageShow, proyectCounter } = this.state;
+        const { proyectCounter } = this.state;
 
         return (
           <div className={styles.divPrincipal}>
@@ -94,6 +115,7 @@ class Portafolios extends React.Component {
                                                   className={styles.image}
                                                   alt={`foto ${item.id}`}
                                                   src={item.imgUrl}
+                                                  onLoad={this.handleImageLoad}
                                               />
                                           </SwiperSlide>
                                       )
