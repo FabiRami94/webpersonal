@@ -5,6 +5,12 @@ import {data} from "../../assets/data.js"
 import WebLinks from "../WebLinks/WebLinks.jsx";
 import projectTechnologies from "../../assets/projectTechnologies.js";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { Pagination } from 'swiper/modules';
 
 class Portafolios extends React.Component {
 
@@ -17,33 +23,6 @@ class Portafolios extends React.Component {
         };
       }
 
-      onClickHandler = (event) => {
-        const { id } = event.target;
-        if (id === "Left2") {
-          this.moveToLeft();
-        } else {
-          this.moveToRigth();
-        }
-      };
-    
-      moveToLeft = () => {
-        const { counter, imageShow } = this.state;
-        if (counter > 0) {
-          this.setState({ imageShow: imageShow + 20, counter: counter - 1 });
-        } else {
-          this.setState({ imageShow: -80, counter: 4 });
-        }
-      };
-    
-      moveToRigth = () => {
-        const { counter, imageShow } = this.state;
-        if (counter < 4) {
-          this.setState({ imageShow: imageShow - 20, counter: counter + 1 });
-        } else {
-          this.setState({ imageShow: 0, counter: 0 });
-        }
-      };
-    
       onClickHandlerProyect = (event) => {
         const { id } = event.target;
         if (id === "Left1") {
@@ -94,36 +73,36 @@ class Portafolios extends React.Component {
                         className={styles.flechaizquierda1}>&#8249;
                     </span>
                     <div className={styles.principalContainer}>
-                        <span
-                        id="Left2"
-                        onClick={this.onClickHandler}
-                        className={styles.flechaizquierda2}>&#8249;
-                        </span>
                         <div className={styles.secondaryContainer}>
                             <h2 style={{ color: 'white', margin: "5px", textAlign: "center" }}>
                                 {data[proyectCounter - 1].NAME}
                             </h2>
-                            <div
-                                className={styles.carruseles}
-                                style={{ transform: `translateX(${imageShow}%)` }}>
-                                {data[proyectCounter - 1][`PROYECTO${proyectCounter}`].map(
+                            <p style={{textAlign: 'center', color: 'white', margin: '0px 0px 5px 0px', fontSize: '12px'}}>
+                              Desliza para ver las imágenes de cada proyecto.</p>
+                            <div>
+                                <Swiper 
+                                  pagination={{ 
+                                    clickable: true, 
+                                    el: '.swiper-pagination', 
+                                    type: 'bullets' }} 
+                                  modules={[Pagination]} 
+                                  className="mySwiper">
+                                  {data[proyectCounter - 1][`PROYECTO${proyectCounter}`].map(
                                     (item) => (
-                                        <section key={item.id} className={styles.sliderSection}>
-                                            <img
-                                                className={styles.image}
-                                                alt={`foto ${item.id}`}
-                                                src={item.imgUrl}
-                                            />
-                                        </section>
-                                    )
-                                )}
+                                          <SwiperSlide key={item.id} >
+                                              <img
+                                                  className={styles.image}
+                                                  alt={`foto ${item.id}`}
+                                                  src={item.imgUrl}
+                                              />
+                                          </SwiperSlide>
+                                      )
+                                  )}
+                                  <div className="swiper-pagination" style={{ bottom: '0px'}}></div>
+                                  <div style={{ paddingTop: '20px' }}></div>
+                                </Swiper>
                             </div>
                         </div>
-                        <span
-                            id="Rigth2"
-                            onClick={this.onClickHandler}
-                            className={styles.flechaderecha2}>&#8250;
-                        </span>
                     </div>
                     <span
                         id="Rigth1"
@@ -144,7 +123,7 @@ class Portafolios extends React.Component {
                   ))}
                 </div>
                 <p style={{textAlign: 'center', color: 'white', marginTop: '0px'}}>
-                    Oprima para apreciar las tecnologías usadas y visitar cada proyectos.</p>   
+                    Oprima para apreciar las tecnologías usadas y visitar cada proyectos.</p> 
             </div> 
           </div>
         )

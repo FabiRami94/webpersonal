@@ -53,7 +53,7 @@ const NavBar = () => {
                     className={styles.linksStyles} 
                     to='contacto'
                     smooth={true} 
-                    offset={200} 
+                    offset={-160} 
                     duration={500}>Contacto</Link>
                 <div className={styles.generalContainerIcon1}>
                     <a href="https://www.linkedin.com/in/fabian-ramirez-6a395b156/" target='_blank' rel="noreferrer">         
