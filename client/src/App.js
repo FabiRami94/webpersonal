@@ -12,7 +12,7 @@ axios.defaults.baseURL = 'https://webpersonal-production-cbc4.up.railway.app/'
 
 function App() {
   return (
-    <div style={{background: '#215669', minHeight: '100vh',}}>
+    <body>
       <header style={{position: 'sticky', top: '0', zIndex: '3'}}>
         <NavBar></NavBar>
       </header>
@@ -36,7 +36,7 @@ function App() {
       <div>
         <DownBar></DownBar>
       </div>
-    </div>
+    </body>
   );
 }
 

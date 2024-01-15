@@ -6,7 +6,7 @@ import habilidadesProgramacion from  '../../assets/dataHabilidades.js';
 const Skills = () => {
 
     return(
-        <div style={{backgroundColor: 'rgb(8, 28, 41, 0.4)'}}>
+        <body >
             <div>
                 <h1 style={{display: 'flex', justifyContent: 'center', marginTop: '0px', paddingTop: '10px'}}>
                     <span style={{color: 'white'}}>Mis</span>&nbsp;
@@ -22,7 +22,7 @@ const Skills = () => {
                     ></Skill>
                 ))}
             </div>
-        </div>
+        </body>
     )
 };
 

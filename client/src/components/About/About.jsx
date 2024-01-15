@@ -11,7 +11,7 @@ export default function About () {
                 </div>
                 <div className={styles.divTexto}>
                     <h1>Fabián Ramírez</h1>
-                    <h4 style={{color: '#00AEF6'}}>Full Stack Developer</h4>
+                    <h4 style={{color: '#00AEF6'}}>UX/UI Web Designer & Full Stack Developer</h4>
                     <p>Programador enfocado en el desarrollo web como Full Satck Developer. 
                         Mis conocimientos incluyen metodologías agiles, GIT, además de experiencia 
                         práctica en el desarrollo de Front-end y Back-end utilizando tecnologías 

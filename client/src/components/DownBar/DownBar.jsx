@@ -5,7 +5,7 @@ import styles from './DownBar.module.css'
 export default function DownBar () {
     
     return (
-        <div className={styles.divGeneral}>
+        <div style={{backgroundColor: 'rgb(14, 18, 41, 0.6)'}}>
             <div className={styles.divSecundario}>
                 <p style={{color: "#f2f2f2"}} >Copyright © Portafolio Fabián Ramírez 2023 All rights reserved. V 1.1.2</p>
                 <a href="https://www.linkedin.com/in/fabian-ramirez-6a395b156/" target='_blank' rel="noreferrer">         
