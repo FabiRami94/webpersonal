@@ -4,7 +4,7 @@ import { TbBrandTypescript, TbBrandCss3 } from 'react-icons/tb';
 import { RiJavascriptLine } from 'react-icons/ri';
 import { AiOutlineHtml5 } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
-import { SiExpress, SiPostgresql, SiSequelize} from 'react-icons/si';
+import { SiExpress, SiPostgresql, SiSequelize, SiMongodb, SiMongoose} from 'react-icons/si';
 
 const habilidadesProgramacion = [
     {   
@@ -66,6 +66,18 @@ const habilidadesProgramacion = [
         name: 'Sequelize', 
         icon: <SiSequelize size={40} />,
         width: 80,
+    },
+    {
+        image: 'https://i.ibb.co/Mg6yzWY/pngwing-com.png',
+        name: 'MongoDB', 
+        icon: <SiMongodb size={40} />,
+        width: 90,
+    },
+    {
+        image: 'https://i.ibb.co/Mg6yzWY/pngwing-com.png',
+        name: 'Moongose', 
+        icon: <SiMongoose size={54} />,
+        width: 90,
     },
 ]
 

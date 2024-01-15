@@ -64,15 +64,46 @@ class Portafolios extends React.Component {
           },
         });
       };
-    
-      handleProjectChange = (newProjectCounter) => {
+
+      handleProjectChange = async (newProjectCounter) => {
         this.setState({
           proyectCounter: newProjectCounter,
+          imageCache: {}, // Limpiamos la caché de imágenes
         });
-    
+      
+        await this.waitForImagesToLoad(); // Esperamos a que las imágenes se carguen
+      
         this.setState({
-          imageCache: {},
+          imageCache: {}, // Limpiamos la caché nuevamente después de que todas las imágenes están cargadas
         });
+      };
+      
+      waitForImagesToLoad = () => {
+        const { proyectCounter } = this.state;
+        const currentProject = data[proyectCounter - 1][`PROYECTO${proyectCounter}`];
+      
+        const promises = currentProject.map((item) => {
+          const imageURL = item.imgUrl;
+      
+          return new Promise((resolve) => {
+            if (this.state.imageCache[imageURL]) {
+              // Si la imagen ya está en caché, resolvemos inmediatamente
+              resolve();
+            } else {
+              // Si la imagen no está en caché, esperamos a que se cargue y luego resolvemos
+              const img = new Image();
+              img.src = imageURL;
+              img.onload = () => resolve();
+              this.setState((prevState) => ({
+                imageCache: {
+                  ...prevState.imageCache,
+                  [imageURL]: img,
+                },
+              }));
+            }
+          });
+        });  
+        return Promise.all(promises);
       };
 
     render(){
