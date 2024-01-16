@@ -7,7 +7,7 @@ FaFigma
 const skillsNoCode = [
     {   
         image: 'https://i.ibb.co/QKGG7v0/Logo-Figma.png',
-        name: 'Figma / XD', 
+        name: 'Figma/XD', 
         icon: <FaFigma size={36} />,
         width: 100,
     },

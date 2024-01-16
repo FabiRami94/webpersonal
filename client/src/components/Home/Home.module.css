@@ -28,7 +28,6 @@
 
 .imagen {
     width: 500px;
-    border-radius: 30px;
 }
 
     @media (max-width: 1080px) {
@@ -41,8 +40,8 @@
 
 .divImagen {
     border-radius: 30px;
-    margin: 50px;
-    background-color: rgba(8, 28, 41, 0.4);
+   margin: 50px 100px 0px 0px;
+   
 }
 
     @media (max-width: 1080px) {

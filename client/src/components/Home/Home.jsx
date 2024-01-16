@@ -38,7 +38,7 @@ const Home = () => {
                         Kung Fu Panda</p>
                 </div>
                 <div className={styles.divImagen}>
-                    <img  className={styles.imagen} alt="PorfesionalImage" src="https://i.ibb.co/0Ym1m6s/imagen-Superior.jpg"/>
+                    <img  className={styles.imagen} alt="PorfesionalImage" src="https://i.ibb.co/tJCW6cL/Recurso-3.png"/>
                 </div>
             </body>            
         </>
