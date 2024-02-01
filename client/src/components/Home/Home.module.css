@@ -12,6 +12,8 @@
         }
     }
 
+
+
 .divTexto{
     width: 50%;
     margin: 60px 20px 80px 20px;
@@ -23,6 +25,18 @@
         .divTexto{
             width: 80%;
             margin: 0 auto;
+        }
+    }
+
+.divTextoChange{
+    position: relative;
+    width: 90%;
+    height: 80px;
+}
+    
+    @media (max-width: 1080px) {
+        .divTextoChange{
+            height: 150px;
         }
     }
 
@@ -40,8 +54,7 @@
 
 .divImagen {
     border-radius: 30px;
-   margin: 50px 100px 0px 0px;
-   
+    margin: 50px 100px 0px 0px;
 }
 
     @media (max-width: 1080px) {
@@ -66,4 +79,14 @@
 .spanBlue{
     color: rgb(0, 174, 246);
 }
-
+  
+.p1, .p2 {
+    position: absolute;
+    transition: opacity 2s ease-in-out;
+    opacity: 1;
+}
+  
+.transition {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}

@@ -207,3 +207,38 @@
     transition: all .6s ease ;
   }
 }
+
+/* Para transición de idiomas */
+.p1, .p2 {
+  margin: 0 auto;
+  position: absolute;
+  transition: opacity 2s ease-in-out;
+  opacity: 1;
+}
+
+.transition {
+  transition: opacity 0s ease-in-out;
+  opacity: 0;
+}
+
+.divChange{
+  position: relative;
+  justify-content: center;
+}
+
+  @media (max-width: 768px) {
+    .divChange{
+      margin: 15% 0% 0% 30%;
+      
+    }
+  }
+
+.toggleButton{
+  margin: 0% 0% 3% 20px;
+}
+
+  @media (max-width: 768px) {
+    .toggleButton{
+      margin: 10% 0% 0% 0%;  
+    }
+  }
