@@ -1,5 +1,5 @@
 
-label{
+.labelLetter{
     width: 80px;
     height: 32px;
     position: relative;
@@ -13,7 +13,7 @@ label{
     text-align: center;
 }
 
-label::after{
+.labelLetter::after{
     content: 'ESP';
     color: white;
     width: 40px;
@@ -28,19 +28,19 @@ label::after{
     transition: 1s;
 }
 
-input{
+.inputLetter{
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
-input:checked + label::after{
+.inputLetter:checked + label::after{
     content: 'ENG'; 
     left: 60px;
     transform: translateX(-50%);
     background: rgb(0, 174, 246);
 }
 
-label:active::after{
+.labelLetter:active::after{
     width: 32px;
 }

@@ -54,3 +54,28 @@
             margin: 20px 0px 0px 210px;
         }
     }
+
+/* Cambio de lenguaje */
+
+.divTextoChange{
+    position: relative;
+    width: 90%;
+    height: 140px;
+}
+    
+    @media (max-width: 1080px) {
+        .divTextoChange{
+            height: 280px;
+        }
+    }
+
+.p1, .p2 {
+    position: absolute;
+    transition: opacity 2s ease-in-out;
+    opacity: 1;
+}
+      
+.transition {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}

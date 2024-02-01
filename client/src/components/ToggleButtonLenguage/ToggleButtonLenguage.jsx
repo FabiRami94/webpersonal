@@ -15,8 +15,8 @@ const ToggleButtonLenguage = () => {
 
   return (
     <>
-      <input type='checkbox' id='lenguages' onChange={handleChange} ></input>
-        <label for='lenguages'>ESP / ENG</label>   
+      <input className={style.inputLetter} type='checkbox' id='lenguages' onChange={handleChange} ></input>
+        <label className={style.labelLetter} for='lenguages'>ESP / ENG</label>   
       <div className={style.background}></div>
     </>
   );
