@@ -13,8 +13,8 @@ export default function About () {
                     <img className={styles.image} src={'https://i.ibb.co/cYj6Lw6/Foto-profesional.jpg'} alt="PorfesionalImage"/>
                 </div>
                 <div className={styles.divTexto}>
-                    <h1>Fabián Ramírez</h1>
-                    <h4 style={{color: '#00AEF6'}}>UX/UI Web Designer & Full Stack Developer</h4>
+                    <h1 style={{marginBottom: '0'}}>Fabián Ramírez</h1>
+                    <h3 style={{color: '#00AEF6', marginTop: '0.8rem'}}>UX/UI Web Designer & Full Stack Developer</h3>
                     <div className={styles.divTextoChange}>
                         <div className={`${styles.p1} ${!toggle && styles.transition}`}>
                             <p>

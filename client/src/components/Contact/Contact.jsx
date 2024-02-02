@@ -150,7 +150,7 @@ export default function Contact () {
                         flexDirection: 'column'}}>
                         <h3 style={{color: 'rgb(0, 174, 246)', marginTop: '0px'}}>Locación</h3>
                         <span className={style.generalText}>
-                            <IoLocation size={20} className={style.iconos}/> Medellín, Colombia</span>
+                            <IoLocation size={20} className={style.iconos}/> Barranquilla, Colombia</span>
                         <h3 style={{color: 'rgb(0, 174, 246)'}}>Número</h3>
                         <span className={style.generalText}>
                             <HiOutlinePhone  size={20} className={style.iconos}/> +57 300 571 0921</span>

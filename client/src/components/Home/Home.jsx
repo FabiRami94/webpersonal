@@ -29,7 +29,14 @@ const Home = () => {
         <>
             <body className={styles.divGeneral}>
                 <div className={styles.divTexto}>
-                    <h1>Hey, soy Fabián Ramírez</h1>
+                    <div  className={styles.divTitleChange}>
+                      <h1 className={`${styles.p1} ${!toggle && styles.transition}`}>
+                        {`Hey, soy Fabián Ramírez`}
+                      </h1>
+                      <h1 className={`${styles.p2} ${toggle && styles.transition}`}>
+                        {`Hey, I'm Fabián Ramírez`}
+                      </h1>
+                    </div>
                     <h2>
                         <span className={isNeon ? styles.spanNeon : styles.spanSinNeon}>UX/UI</span>&nbsp;
                         <span style={{fontSize: '1.6rem'}} className={isNeon ? styles.spanNeon : styles.spanSinNeon}>Web Designer</span>&nbsp;

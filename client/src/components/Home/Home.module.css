@@ -28,18 +28,6 @@
         }
     }
 
-.divTextoChange{
-    position: relative;
-    width: 90%;
-    height: 80px;
-}
-    
-    @media (max-width: 1080px) {
-        .divTextoChange{
-            height: 150px;
-        }
-    }
-
 .imagen {
     width: 500px;
 }
@@ -79,7 +67,32 @@
 .spanBlue{
     color: rgb(0, 174, 246);
 }
-  
+
+/* Cambio de Lenguaje */
+
+.divTextoChange{
+    position: relative;
+    width: 90%;
+    height: 5rem;
+}
+    
+    @media (max-width: 1080px) {
+        .divTextoChange{
+            height: 10rem;
+        }
+    }
+
+.divTitleChange{
+    position: relative;
+    height: 3rem;
+}
+        
+    @media (max-width: 1080px) {
+        .divTitleChange{
+            height: 3.5rem;
+        }
+    }
+
 .p1, .p2 {
     position: absolute;
     transition: opacity 2s ease-in-out;
