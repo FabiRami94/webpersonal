@@ -32,7 +32,7 @@ const NavBar = () => {
                         to='home'
                         smooth={true}
                         offset={-120}
-                        duration={500}>      
+                        duration={500}>     
                             <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Inicio`}
                             </p>
@@ -111,7 +111,7 @@ const NavBar = () => {
                             <p className={`${styles.p2} ${toggle && styles.transition}`}>
                                 {`Contact`}
                             </p>
-                    </Link>
+                    </Link> 
                 </div>
                 <div className={styles.generalContainerIcon1}>
                     <a href="https://www.linkedin.com/in/fabian-ramirez-6a395b156/" target='_blank' rel="noreferrer">         

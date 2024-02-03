@@ -164,7 +164,7 @@ class Portafolios extends React.Component {
                     </span>
                 </div>             
                   <p style={{textAlign: 'center', color: 'white'}}>
-                    Total de proyecto deployados: 1.</p>          
+                    Total de proyecto deployados: 2.</p>          
                 <div className={styles.linkCards}>
                   {projectTechnologies.map((proj) => (
                     <WebLinks 

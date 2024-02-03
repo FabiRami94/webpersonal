@@ -26,18 +26,6 @@ const Skills = () => {
                     ></Skill>
                 ))}
             </div>
-            <div className={styles.Skills} style={{marginTop: '20px'}}>
-                  {NoCodeTechnologies.map((proj) => (
-                    <WebLinks 
-                      key = {proj.id} 
-                      image = {proj.image}
-                      url = {proj.url}
-                      technologies = {proj.technologies}
-                    ></WebLinks>
-                  ))}
-            </div>
-            <p style={{textAlign: 'center', color: 'white', marginTop: '0px'}}>
-                Oprima para apreciar y visitar el portafolio No Code.</p> 
             <div>
                 <h1 style={{display: 'flex', justifyContent: 'center', marginTop: '20px', paddingTop: '10px'}}>
                     <span style={{color: 'white'}}>Mis</span>&nbsp;
