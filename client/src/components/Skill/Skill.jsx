@@ -21,21 +21,29 @@ const Skill = ({image, name, icon, width}) => {
 
     const handleImageWidth = () => {
         if (windowWidth <= 768) {
-            return width / 2;
+            // return width / 2; OLD DESING
+            return width;
         }
         return width;
     };
 
     return( 
-        <div>  
-            <div className={styles.divGeneral} style={{ textAlign: 'center' }}>     
-            <div style={{ textAlign: 'center' }}>           
-                <img src={image} alt="Skill Programing" style={{ width: handleImageWidth()}}/> 
+        <div className={styles.divGeneralSkill}>
+            <div>
+                <img src={image}  style={{ width: handleImageWidth()}}/>
             </div>
-                <h1 className={styles.textStyle}>{name}</h1>                    
-                <div className={styles.buttonMedia}>{icon}</div>   
-            </div> 
+            <h3 className={styles.textStyle}>{name}</h3>   
         </div>
+
+        // <div>  OLD DESIGN LIKE CARDS
+        //     <div className={styles.divGeneral} style={{ textAlign: 'center' }}>     
+        //     <div style={{ textAlign: 'center' }}>           
+        //         <img src={image} alt="Skill Programing" style={{ width: handleImageWidth()}}/> 
+        //     </div>
+        //         <h1 className={styles.textStyle}>{name}</h1>                    
+        //         <div className={styles.buttonMedia}>{icon}</div>   
+        //     </div> 
+        // </div>
     )
 }
 

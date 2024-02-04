@@ -1,13 +1,16 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from './Contact.module.css';
 import { IoLocation } from 'react-icons/io5';
 import { HiOutlinePhone } from 'react-icons/hi';
 import validation from "../../assets/validation.js"
 import axios from "axios";
 import {alertError, alertSuccess} from "../../assets/alerts.js"
+import { useSelector } from "react-redux";
 
 export default function Contact () {
+
+    const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
 
     const [newInput, setNewIInput] = useState(
         {
@@ -17,11 +20,20 @@ export default function Contact () {
         }
     );
 
-    const [errors, setErrors] = useState({
-        nombre: "Campo obligatorio*",
-        correo: "Campo obligatorio*",
-        mensaje: "Campo obligatorio*",
-    });
+    useEffect(() =>{
+
+    },[toggle]) //review
+
+    const [errors, setErrors] = useState(  
+        toggle ? {
+            nombre: "Campo obligatorio*",
+            correo: "Campo obligatorio*",
+            mensaje: "Campo obligatorio*",
+        } : {
+            nombre: "Obligatory field*",
+            correo: "Obligatory field*", //review
+            mensaje: "Obligatory field*",
+        });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -87,8 +99,11 @@ export default function Contact () {
 
     return(
         <div style={{backgroundColor: 'rgb(14, 18, 41, 0.6)', padding: '20px 10px 20px 10px'}}>
-            <div className={style.divGeneral}>     
-                <h1 style={{color: 'rgb(0, 174, 246)'}}>Contact</h1>
+            <div className={style.divGeneral}> 
+                <div className={style.divChange}>
+                    <h1 className={`${style.p3} ${!toggle && style.transition}`} style={{color: 'rgb(0, 174, 246)'}}>Contacto</h1>
+                    <h1 className={`${style.p3} ${toggle && style.transition}`} style={{color: 'rgb(0, 174, 246)'}}>Contact</h1>
+                </div>    
                 <div className={style.divSecundario}>
                     <form 
                         onSubmit={submitHandler}

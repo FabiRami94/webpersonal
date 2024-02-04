@@ -1,5 +1,5 @@
 
-.Skills{
+.generalSkills{
     padding: 10px 10px 10px 10px;
     display: flex;
     flex-direction: row;
@@ -8,3 +8,75 @@
     align-items: center;
     align-content: flex-start; 
 }
+
+.skills{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start; 
+    background-color: rgb(14, 18, 41);
+    border-radius: 0.2rem;
+}
+
+.deployButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(0, 174, 246);
+    color: white;
+    font-weight: 400;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+    height: 2.2rem;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+}
+
+/* Para apertura y cierre de habilidades */
+
+
+
+/* Para transición de idiomas */
+.p1, .p2 {
+    margin-top: -7%;
+    position: absolute;
+    transition: opacity 2s ease-in-out;
+    opacity: 1;
+  }
+  
+.p3, .p4{
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -130%);
+  position: absolute;
+  transition: opacity 2s ease-in-out;
+  opacity: 1;
+}
+
+  @media(max-width: 768px){
+    .p3, .p4{
+      transform: translate(-50%, -110%);
+    }
+  }
+
+.transition {
+    transition: opacity 0s ease-in-out;
+    opacity: 0;
+  }
+  
+  .divChange{
+    position: relative;
+  }
+
+/* .Skills{   OLD DESING
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start; 
+} */

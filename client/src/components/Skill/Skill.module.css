@@ -1,4 +1,31 @@
 
+.divGeneralSkill{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+}
+
+.textStyle{
+    margin: 0rem 0rem 0rem 1rem;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+    @media(max-width: 768px){
+        .textStyle{
+            font-weight: 500;
+            font-size: 15px;
+            margin: 6px;
+        }
+    }
+
+.buttonMedia{
+    color: rgb(0, 174, 246);  
+}
+
+/* OLD DESING
 .divGeneral{
     display: flex;
     flex-direction: column;
@@ -43,6 +70,6 @@
 
 .buttonMedia{
     color: white;  
-}
+} */
 
 
