@@ -21,6 +21,12 @@
     border-radius: 0.2rem;
 }
 
+  @media(max-width: 1080px){
+    .skills{
+      margin: 0.5rem;
+    }
+  }
+
 .deployButton{
     display: flex;
     flex-direction: row;
@@ -34,10 +40,6 @@
     padding: 0.2rem 1rem;
     cursor: pointer;
 }
-
-/* Para apertura y cierre de habilidades */
-
-
 
 /* Para transición de idiomas */
 .p1, .p2 {
@@ -67,9 +69,26 @@
     opacity: 0;
   }
   
-  .divChange{
-    position: relative;
-  }
+.divChange{
+  position: relative;
+}
+
+/* Open y Close the div with skills */
+.closeDiv {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 1s ease-in-out, max-height 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.openDiv {
+  opacity: 1;
+  visibility: visible;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: opacity 1s ease-in-out, max-height 1s ease-in-out, visibility 1s ease-in-out;
+}
 
 /* .Skills{   OLD DESING
     padding: 10px 10px 10px 10px;

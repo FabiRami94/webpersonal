@@ -15,7 +15,6 @@ const NavBar = () => {
     const handleClick = () => {
       setClicked(!clicked)
     }
-    console.log(clicked)
     
     return(
         <main className={styles.mainStyle}>

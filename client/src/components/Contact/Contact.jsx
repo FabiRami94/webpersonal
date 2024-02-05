@@ -114,7 +114,10 @@ export default function Contact () {
                             display: 'flex', 
                             flexDirection: 'row', 
                             marginTop: '10px'}}>
-                            <label className={style.generalText}>Nombre:</label>
+                            <div style={{width: '4.5rem'}}>
+                                <label className={`${style.generalText} ${style.p1} ${!toggle && style.transition}`}>Nombre:</label>
+                                <label className={`${style.generalText} ${style.p2} ${toggle && style.transition}`}>Name:</label>
+                            </div>
                             <input 
                                 id="nombre"
                                 type="text" 
@@ -129,20 +132,25 @@ export default function Contact () {
                             display: 'flex', 
                             flexDirection: 'row',
                             marginTop: '10px'}}>
-                            <label className={style.generalText}>Correo:</label>
+                            <div style={{width: '4.5rem'}}>
+                                <label className={`${style.generalText} ${style.p1} ${!toggle && style.transition}`}>Correo:</label>
+                                <label className={`${style.generalText} ${style.p2} ${toggle && style.transition}`}>Email:</label>
+                            </div>
                             <input
                                 id="correo"
                                 type="text" 
                                 name="correo" 
                                 value={newInput.correo}
                                 onChange={onChangeHandler} 
-                                style={{marginLeft: '12px'}}
                                 className={style.input} 
                                 placeholder="Escribe un correo..."></input>
                         </div>
                         <p className={style.errorsLetter}>{errors.correo}</p>
                         <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
-                            <label className={style.generalText}>Mensaje:</label>
+                            <div style={{width: '4.5rem'}}>
+                                <label className={`${style.generalText} ${style.p1} ${!toggle && style.transition}`}>Mensaje:</label>
+                                <label className={`${style.generalText} ${style.p2} ${toggle && style.transition}`}>Message:</label>
+                            </div>
                             <textarea
                                 id="mensaje"
                                 type="text" 
@@ -150,6 +158,7 @@ export default function Contact () {
                                 value={newInput.mensaje}
                                 onChange={onChangeHandler}
                                 rows="4" cols="60"
+                                style={{height: '5rem'}}
                                 className={style.input} 
                                 placeholder="Escribe un mensaje..."></textarea>
                         </div>

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import Skill from "../Skill/Skill";
 import styles from './Skills.module.css';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -9,6 +9,21 @@ import { useSelector } from "react-redux";
 const Skills = () => {
 
     const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
+    const [buttonOpen, setButtonOpen] = useState({
+        nocode: true,
+        fronted: true,
+        backend: true
+    });
+
+   
+    const buttonOpenHandler = (section) => {
+        setButtonOpen((prevButtonOpen) => ({
+        ...prevButtonOpen,
+        [section]: !prevButtonOpen[section]
+        }));
+        console.log(buttonOpen)
+        console.log(buttonOpen['nocode'])
+    };
 
     return(
         <body >      
@@ -24,7 +39,7 @@ const Skills = () => {
             </div>       
             <div div className={styles.generalSkills}>
                 <div className={styles.skills}>
-                    <div className={styles.deployButton}>
+                    <div onClick={() => buttonOpenHandler('nocode')} className={styles.deployButton}>
                         <div style={{width: '12rem'}} className={styles.divChange}>
                             <h2 className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades No Code`}
@@ -33,19 +48,21 @@ const Skills = () => {
                                 {`No Code Skills`}
                             </h2>
                         </div>
-                        <IoIosArrowDown size={40}/>
+                        {!buttonOpen['nocode'] ? <IoIosArrowDown size={40}/> : <IoIosArrowUp size={40}/> }
                     </div>
-                    {noCodeSkills.map((habilidad) => (  
-                        <Skill  image = {habilidad.image} 
-                                name = {habilidad.name}
-                                icon = {habilidad.icon}
-                                link = {habilidad.link}
-                                width = {habilidad.width}
-                        ></Skill>
-                    ))}
+                    <div className={!buttonOpen['nocode'] ? `${styles.closeDiv}` : `${styles.openDiv}`}>
+                        {noCodeSkills.map((habilidad) => (  
+                            <Skill  image = {habilidad.image} 
+                                    name = {habilidad.name}
+                                    icon = {habilidad.icon}
+                                    link = {habilidad.link}
+                                    width = {habilidad.width}
+                            ></Skill>
+                        ))}
+                    </div>
                 </div>
                 <div className={styles.skills}>
-                    <div className={styles.deployButton}>
+                    <div onClick={() => buttonOpenHandler('fronted')} className={styles.deployButton}>
                         <div style={{width: '12rem'}} className={styles.divChange}>
                             <h2 className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades Fronted`}
@@ -54,8 +71,9 @@ const Skills = () => {
                                 {`Fronted Skills`}
                             </h2>
                         </div>
-                        <IoIosArrowDown size={40}/>
+                        {!buttonOpen['fronted'] ? <IoIosArrowDown size={40}/> : <IoIosArrowUp size={40}/> }
                     </div>
+                    <div className={!buttonOpen['fronted'] ? `${styles.closeDiv}` : `${styles.openDiv}`}>
                     {frontedSkills.map((habilidad) => (  
                         <Skill  image = {habilidad.image} 
                                 name = {habilidad.name}
@@ -64,9 +82,10 @@ const Skills = () => {
                                 width = {habilidad.width}
                         ></Skill>
                     ))}
+                    </div>
                 </div>
                 <div className={styles.skills}>
-                    <div className={styles.deployButton}>
+                    <div onClick={() => buttonOpenHandler('backend')} className={styles.deployButton}>
                         <div style={{width: '12rem'}} className={styles.divChange}>
                             <h2 className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades Backend`}
@@ -75,8 +94,9 @@ const Skills = () => {
                                 {`Backend Skills`}
                             </h2>
                         </div>
-                        <IoIosArrowDown size={40}/>
+                        {!buttonOpen['backend'] ? <IoIosArrowDown size={40}/> : <IoIosArrowUp size={40}/> }
                     </div>
+                    <div className={!buttonOpen['backend'] ? `${styles.closeDiv}` : `${styles.openDiv}`}>
                     {backendSkills.map((habilidad) => (  
                         <Skill  image = {habilidad.image} 
                                 name = {habilidad.name}
@@ -85,6 +105,7 @@ const Skills = () => {
                                 width = {habilidad.width}
                         ></Skill>
                     ))}
+                    </div>
                 </div>
             </div>
         </body>
