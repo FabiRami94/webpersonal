@@ -11,16 +11,19 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
+import { connect } from "react-redux";
 
 class Portafolios extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          proyectCounter: 1,
-          imageCache: {},
-        };
-      }
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      proyectCounter: 1,
+      imageCache: {},
+    };
+  }
+  
 
       onClickHandlerProyect = (event) => {
         const { id } = event.target;
@@ -109,16 +112,22 @@ class Portafolios extends React.Component {
     render(){
 
         const { proyectCounter } = this.state;
+        const { toggle } = this.props;
 
         return (
           <div className={styles.divPrincipal}>
             <div className={styles.divGeneral}>
-                <div>
-                    <h1 style={{display: 'flex', justifyContent: 'center'}}>
-                        <span style={{color: 'white', marginTop: '20px'}}>Mis</span>&nbsp;
-                        <span style={{color: '#08AAEA', marginTop: '45px'}}>Proyectos</span></h1>
-                </div>
-                <div style={{ display: "flex", flexDirection: "row" }}>
+                <div style={{height: '2rem'}} className={styles.divChange}>
+                    <h1 className={`${styles.p3} ${!toggle && styles.transition}`}>
+                        <span style={{color: 'white'}}>Mis</span>&nbsp;
+                        <span style={{color: '#00AEF6'}}>Proyectos</span>
+                    </h1>
+                    <h1 className={`${styles.p4} ${toggle && styles.transition}`}>
+                        <span style={{color: 'white'}}>My</span>&nbsp;
+                        <span style={{color: '#00AEF6'}}>Projects</span>
+                    </h1>
+                </div> 
+                <div style={{ display: "flex", flexDirection: "row", marginTop: '4rem' }}>
                     <span
                         id="Left1"
                         onClick={this.onClickHandlerProyect}
@@ -129,8 +138,14 @@ class Portafolios extends React.Component {
                             <h2 style={{ color: 'white', margin: "5px", textAlign: "center" }}>
                                 {data[proyectCounter - 1].NAME}
                             </h2>
-                            <p style={{textAlign: 'center', color: 'white', margin: '0px 0px 5px 0px', fontSize: '12px'}}>
-                              Desliza para ver las imágenes de cada proyecto.</p>
+                            <div style={{height: '2rem'}} className={styles.divChange}>
+                              <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                  {`Desliza para ver las imágenes de cada proyecto.`}
+                              </p>
+                              <p className={`${styles.p1} ${toggle && styles.transition}`}>
+                                {`Swipe to see the images of each project.`}
+                              </p>
+                            </div>
                             <div>
                                 <Swiper 
                                   pagination={{ 
@@ -162,9 +177,15 @@ class Portafolios extends React.Component {
                         onClick={this.onClickHandlerProyect}
                         className={styles.flechaderecha1}>&#8250;
                     </span>
-                </div>             
-                  <p style={{textAlign: 'center', color: 'white'}}>
-                    Total de proyecto deployados: 2.</p>          
+                </div>
+                <div style={{height: '4rem'}} className={styles.divChange}>
+                  <p className={`${styles.p2} ${!toggle && styles.transition}`}>
+                    {`Total de proyecto deployados: 2.`}
+                  </p>
+                  <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                    {`Total deployed projects: 2.`}
+                  </p>
+                </div>         
                 <div className={styles.linkCards}>
                   {projectTechnologies.map((proj) => (
                     <WebLinks 
@@ -175,12 +196,24 @@ class Portafolios extends React.Component {
                     ></WebLinks>
                   ))}
                 </div>
-                <p style={{textAlign: 'center', color: 'white', marginTop: '0px'}}>
-                    Oprima para apreciar las tecnologías usadas y visitar cada proyectos.</p> 
+                <div id="minor" style={{height: '2rem'}} className={styles.divChange}>
+                  <p style={{ transform: 'translate(-50%, -140%)'}} className={`${styles.p2} ${!toggle && styles.transition}`}>
+                    {`Oprima para apreciar las tecnologías usadas y visitar cada proyectos.`}
+                  </p>
+                  <p style={{ transform: 'translate(-50%, -140%)'}} className={`${styles.p2} ${toggle && styles.transition}`}>
+                    {`Click to see the technologies used and visit each project.`}
+                  </p>
+                </div>  
             </div> 
           </div>
         )
     }
 }
 
-export default Portafolios;
+const mapStateProps = (state) => {
+  return{
+    toggle: state.toggle.toogleButtonLenguage,
+  };
+};
+
+export default connect(mapStateProps)(Portafolios);
