@@ -1,16 +1,41 @@
 
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./NavBar.module.css";
 import { Link } from 'react-scroll';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import './NavBar.module.css'
 import ToggleButtonLenguage from "../ToggleButtonLenguage/ToggleButtonLenguage";
 import { useSelector } from "react-redux";
+import ToggleButton from "../ToggleButton/ToggleButton";
 
 const NavBar = () => {  
 
     const [clicked, setClicked] = useState(false);
     const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const handleTogglesWidth = (section) => {
+        if (windowWidth <= 768 && section === 'end') {
+            return 'none';
+        } else if(windowWidth >= 768 && section === 'start'){
+            return 'none';
+        } else{
+            return '';
+        }
+    };
     
     const handleClick = () => {
       setClicked(!clicked)
@@ -22,6 +47,10 @@ const NavBar = () => {
                 <h1 className={styles.nombreGit}>FabiRami94.</h1>
             </div>
             <div className={`${styles.divLinks} ${clicked ? styles.active : ''}`}>
+                <div style={{display: handleTogglesWidth('start')}} className={styles.toggleButton}>
+                    <ToggleButtonLenguage></ToggleButtonLenguage>
+                    {/* <ToggleButton></ToggleButton> */}
+                </div>
                 <div 
                     style={{marginRight: toggle ? '35px' : '40px'}} 
                     className={styles.divChange}>
@@ -120,8 +149,9 @@ const NavBar = () => {
                         <div className={styles.buttonMedia}><BsGithub size={20}/></div>
                     </a>           
                 </div>
-                <div className={styles.toggleButton}>
+                <div style={{display: handleTogglesWidth('end')}} className={styles.toggleButton}>
                     <ToggleButtonLenguage></ToggleButtonLenguage>
+                    {/* <ToggleButton></ToggleButton> */}
                 </div>
             </div>
             <div className={styles.generalContainerIcon2}>

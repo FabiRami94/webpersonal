@@ -21,8 +21,6 @@ const Skills = () => {
         ...prevButtonOpen,
         [section]: !prevButtonOpen[section]
         }));
-        console.log(buttonOpen)
-        console.log(buttonOpen['nocode'])
     };
 
     return(

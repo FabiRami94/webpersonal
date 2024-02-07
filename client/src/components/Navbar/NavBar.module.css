@@ -240,11 +240,12 @@
   }
 
 .toggleButton{
-  margin: 0% 0% 3% 20px;
+  display: flex;
+  flex-direction: row;
 }
 
   @media (max-width: 768px) {
     .toggleButton{
-      margin: 10% 0% 0% 0%;  
+      margin: 3rem 1.2rem 0rem 0rem;  
     }
   }
