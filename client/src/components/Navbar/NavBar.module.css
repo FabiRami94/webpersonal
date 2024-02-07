@@ -216,6 +216,13 @@
   opacity: 1;
 }
 
+  @media(max-width: 768px){ /* Centrado */
+    .p1, .p2{
+      left: 50%; 
+      transform: translateX(-50%);
+    }
+  }
+
 .transition {
   transition: opacity 0s ease-in-out;
   opacity: 0;
@@ -229,7 +236,6 @@
   @media (max-width: 768px) {
     .divChange{
       display:contents;      
-   
     }
   }
 
