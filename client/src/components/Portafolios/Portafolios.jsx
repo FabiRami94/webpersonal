@@ -113,6 +113,7 @@ class Portafolios extends React.Component {
 
         const { proyectCounter } = this.state;
         const { toggle } = this.props;
+        const { toggleColor } = this.props;
 
         return (
           <div className={styles.divPrincipal}>
@@ -213,6 +214,7 @@ class Portafolios extends React.Component {
 const mapStateProps = (state) => {
   return{
     toggle: state.toggle.toogleButtonLenguage,
+    toggleColor: state.toggle.toogleButtonColorMode,
   };
 };
 

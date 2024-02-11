@@ -12,8 +12,6 @@
         }
     }
 
-
-
 .divTexto{
     width: 50%;
     margin: 60px 20px 80px 20px;
@@ -90,7 +88,7 @@
     @media (max-width: 1080px) {
         .divTitleChange{
             height: 3.5rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
     }
 

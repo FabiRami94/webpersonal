@@ -47,10 +47,15 @@ const NavBar = () => {
                 <h1 className={styles.nombreGit}>FabiRami94.</h1>
             </div>
             <div className={`${styles.divLinks} ${clicked ? styles.active : ''}`}>
-                <div style={{display: handleTogglesWidth('start')}} className={styles.toggleButton}>
+                {windowWidth <= 768 ? <div className={styles.toggleButton}>
                     <ToggleButtonLenguage></ToggleButtonLenguage>
-                    {/* <ToggleButton></ToggleButton> */}
-                </div>
+                    <ToggleButton></ToggleButton>
+                </div> : null
+                }
+                {/* <div style={{display: handleTogglesWidth('start')}} className={styles.toggleButton}>
+                    <ToggleButtonLenguage></ToggleButtonLenguage>
+                    <ToggleButton></ToggleButton>
+                </div> */}
                 <div 
                     style={{marginRight: toggle ? '35px' : '40px'}} 
                     className={styles.divChange}>
@@ -149,10 +154,15 @@ const NavBar = () => {
                         <div className={styles.buttonMedia}><BsGithub size={20}/></div>
                     </a>           
                 </div>
-                <div style={{display: handleTogglesWidth('end')}} className={styles.toggleButton}>
+                {windowWidth > 768 ? <div className={styles.toggleButton}>
                     <ToggleButtonLenguage></ToggleButtonLenguage>
-                    {/* <ToggleButton></ToggleButton> */}
-                </div>
+                    <ToggleButton></ToggleButton>
+                </div> : null
+                }
+                {/* <div style={{display: handleTogglesWidth('end')}} className={styles.toggleButton}>
+                    <ToggleButtonLenguage></ToggleButtonLenguage>
+                    <ToggleButton></ToggleButton>
+                </div> */}
             </div>
             <div className={styles.generalContainerIcon2}>
                 <a href="https://www.linkedin.com/in/fabian-ramirez-6a395b156/" target='_blank' rel="noreferrer">         

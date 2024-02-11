@@ -6,15 +6,20 @@ import { useSelector } from "react-redux";
 export default function About () {
     
     const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
+    const toggleColor = useSelector((state) => state.toggle.toogleButtonColorMode);
+    const textShadow = '1px 1px 2px black';
 
     return(
-        <body className={styles.divCompleto}>
+        <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} className={styles.divCompleto}>
                 <div style={{width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <img className={styles.image} src={'https://i.ibb.co/cYj6Lw6/Foto-profesional.jpg'} alt="PorfesionalImage"/>
                 </div>
-                <div className={styles.divTexto}>
+                <div style={toggleColor ? { color: 'black' } : null} className={styles.divTexto}>
                     <h1 style={{marginBottom: '0'}}>Fabián Ramírez</h1>
-                    <h3 style={{color: '#00AEF6', marginTop: '0.8rem'}}>UX/UI Web Designer & Full Stack Developer</h3>
+                    <h3 style={
+                            toggleColor ? 
+                            {textShadow, color: '#00AEF6', marginTop: '0.8rem'} : 
+                            {color: '#00AEF6', marginTop: '0.8rem'}}>UX/UI Web Designer & Full Stack Developer</h3>
                     <div className={styles.divTextoChange}>
                         <div className={`${styles.p1} ${!toggle && styles.transition}`}>
                             <p>

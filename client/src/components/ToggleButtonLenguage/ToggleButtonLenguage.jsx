@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import style from './ToggleButtonLenguage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { lenguage } from '../../redux/toggleSlice';

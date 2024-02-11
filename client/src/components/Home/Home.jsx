@@ -7,6 +7,8 @@ const Home = () => {
 
     const [isNeon, setIsNeon] = useState(true);
     const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
+    const toggleColor = useSelector((state) => state.toggle.toogleButtonColorMode);
+    const textShadow = '1px 1px 2px black';
 
     useEffect(() => {
 
@@ -27,8 +29,8 @@ const Home = () => {
 
     return(
         <>
-            <body className={styles.divGeneral}>
-                <div className={styles.divTexto}>
+            <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} className={styles.divGeneral}>
+                <div style={toggleColor ? { color: 'black' } : null} className={styles.divTexto}>
                     <div  className={styles.divTitleChange}>
                       <h1 className={`${styles.p1} ${!toggle && styles.transition}`}>
                         {`Hey, soy Fabián Ramírez`}
@@ -37,10 +39,10 @@ const Home = () => {
                         {`Hey, I'm Fabián Ramírez`}
                       </h1>
                     </div>
-                    <h2>
+                    <h2 style={toggleColor ? { color: 'rgb(14, 18, 41)'} : null}>
                         <span className={isNeon ? styles.spanNeon : styles.spanSinNeon}>UX/UI</span>&nbsp;
                         <span style={{fontSize: '1.6rem'}} className={isNeon ? styles.spanNeon : styles.spanSinNeon}>Web Designer</span>&nbsp;
-                        <span className={styles.spanBlue}>& Full Stack Developer</span>
+                        <span style={toggleColor ? {textShadow} : null} className={styles.spanBlue}>& Full Stack Developer</span>
                     </h2>
                     <div className={styles.divTextoChange}>
                       <p className={`${styles.p1} ${!toggle && styles.transition}`}>

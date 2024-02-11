@@ -1,6 +1,8 @@
 
 import React from 'react';
 import style from './ToggleButton.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { colorMode } from '../../redux/toggleSlice';
 
 const ToggleButton = () => {
 
@@ -15,9 +17,16 @@ const ToggleButton = () => {
     //     body.style.backgroundColor = toggleSwitch.checked ? 'rgb(14, 18, 41)' : null;
     //   };
 
+  const toggleColor = useSelector((state) => state.toggle)
+  const dispatch = useDispatch();
+
+  const handleChange = () => {
+    dispatch(colorMode(!toggleColor.toogleButtonColorMode));
+  }
+
     return (
       <>
-        <input className={style.inputColor} type='checkbox' id='darkmode-toggle' ></input>
+        <input className={style.inputColor} type='checkbox' id='darkmode-toggle' onChange={handleChange}></input>
         <label className={style.labelColor} for='darkmode-toggle'></label>
         <div className={style.background}></div>
       </>

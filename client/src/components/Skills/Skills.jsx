@@ -9,13 +9,15 @@ import { useSelector } from "react-redux";
 const Skills = () => {
 
     const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
+    const toggleColor = useSelector((state) => state.toggle.toogleButtonColorMode);
+    const textShadow = '1px 1px 2px black';
+
     const [buttonOpen, setButtonOpen] = useState({
         nocode: true,
         fronted: true,
         backend: true
     });
-
-   
+ 
     const buttonOpenHandler = (section) => {
         setButtonOpen((prevButtonOpen) => ({
         ...prevButtonOpen,
@@ -24,20 +26,31 @@ const Skills = () => {
     };
 
     return(
-        <body >      
+        <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} >      
             <div style={{height: '2rem'}} className={styles.divChange}>
                 <h1 className={`${styles.p3} ${!toggle && styles.transition}`}>
-                    <span style={{color: 'white'}}>Mis</span>&nbsp;
-                    <span style={{color: '#00AEF6'}}>Habilidades</span>
+                    <span style={!toggleColor ? {color: 'white'} : {color: 'black'}}>Mis</span>&nbsp;
+                    <span style={
+                            toggleColor ? 
+                            {textShadow, color: '#00AEF6', marginTop: '0.8rem'} : 
+                            {color: '#00AEF6', marginTop: '0.8rem'}}>Habilidades</span>
                 </h1>
                 <h1 className={`${styles.p4} ${toggle && styles.transition}`}>
-                    <span style={{color: 'white'}}>My</span>&nbsp;
-                    <span style={{color: '#00AEF6'}}>Skills</span>
+                    <span style={!toggleColor ? {color: 'white'} : {color: 'black'}}>My</span>&nbsp;
+                    <span style={
+                            toggleColor ? 
+                            {textShadow, color: '#00AEF6', marginTop: '0.8rem'} : 
+                            {color: '#00AEF6', marginTop: '0.8rem'}}>Skills</span>
                 </h1>
             </div>       
-            <div div className={styles.generalSkills}>
-                <div className={styles.skills}>
-                    <div onClick={() => buttonOpenHandler('nocode')} className={styles.deployButton}>
+            <div className={styles.generalSkills}>
+                <div 
+                    style={toggleColor ? {backgroundColor: 'rgb(14, 18, 41, 0.8)'} : null}  
+                    className={styles.skills}>
+                    <div 
+                        style={toggleColor ? {color: 'black'} : null} 
+                        onClick={() => buttonOpenHandler('nocode')} 
+                        className={styles.deployButton}>
                         <div style={{width: '12rem'}} className={styles.divChange}>
                             <h2 className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades No Code`}
@@ -59,8 +72,13 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className={styles.skills}>
-                    <div onClick={() => buttonOpenHandler('fronted')} className={styles.deployButton}>
+                <div 
+                    style={toggleColor ? {backgroundColor: 'rgb(14, 18, 41, 0.8)'} : null} 
+                    className={styles.skills}>
+                    <div 
+                        style={toggleColor ? {color: 'black'} : null}
+                        onClick={() => buttonOpenHandler('fronted')} 
+                        className={styles.deployButton}>
                         <div style={{width: '12rem'}} className={styles.divChange}>
                             <h2 className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades Fronted`}
@@ -82,8 +100,13 @@ const Skills = () => {
                     ))}
                     </div>
                 </div>
-                <div className={styles.skills}>
-                    <div onClick={() => buttonOpenHandler('backend')} className={styles.deployButton}>
+                <div 
+                    style={toggleColor ? {backgroundColor: 'rgb(14, 18, 41, 0.8)'} : null} 
+                    className={styles.skills}>
+                    <div 
+                        style={toggleColor ? {color: 'black'} : null}
+                        onClick={() => buttonOpenHandler('backend')} 
+                        className={styles.deployButton}>
                         <div style={{width: '12rem'}} className={styles.divChange}>
                             <h2 className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades Backend`}
