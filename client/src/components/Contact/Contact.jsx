@@ -123,10 +123,8 @@ export default function Contact () {
                             marginTop: '10px'}}>
                             <div style={{width: '4.5rem'}}>
                                 <label 
-                                    style={toggleColor ? { color: 'black', fontWeight: '600' } : null} 
                                     className={`${style.generalText} ${style.p1} ${!toggle && style.transition}`}>Nombre:</label>
                                 <label 
-                                    style={toggleColor ? { color: 'black', fontWeight: '600' } : null} 
                                     className={`${style.generalText} ${style.p2} ${toggle && style.transition}`}>Name:</label>
                             </div>
                             <input 
@@ -138,8 +136,7 @@ export default function Contact () {
                                 className={style.input} 
                                 placeholder="Escribe un nombre..."></input>
                         </div>
-                        <p 
-                            style={toggleColor ? { color: 'black', fontWeight: '600' } : null} 
+                        <p
                             className={style.errorsLetter}>{errors.nombre}</p>
                         <div style={{
                             display: 'flex', 
@@ -147,10 +144,8 @@ export default function Contact () {
                             marginTop: '10px'}}>
                             <div style={{width: '4.5rem'}}>
                                 <label 
-                                    style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                                     className={`${style.generalText} ${style.p1} ${!toggle && style.transition}`}>Correo:</label>
                                 <label 
-                                    style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                                     className={`${style.generalText} ${style.p2} ${toggle && style.transition}`}>Email:</label>
                             </div>
                             <input
@@ -163,15 +158,12 @@ export default function Contact () {
                                 placeholder="Escribe un correo..."></input>
                         </div>
                         <p 
-                            style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                             className={style.errorsLetter}>{errors.correo}</p>
                         <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
                             <div style={{width: '4.5rem'}}>
                                 <label 
-                                    style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                                     className={`${style.generalText} ${style.p1} ${!toggle && style.transition}`}>Mensaje:</label>
                                 <label 
-                                    style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                                     className={`${style.generalText} ${style.p2} ${toggle && style.transition}`}>Message:</label>
                             </div>
                             <textarea
@@ -186,7 +178,6 @@ export default function Contact () {
                                 placeholder="Escribe un mensaje..."></textarea>
                         </div>
                         <p 
-                            style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                             className={style.errorsLetter}>{errors.mensaje}</p>
                         <div style={{alignItems: 'center'}}>
                             <button  
@@ -203,12 +194,10 @@ export default function Contact () {
                         flexDirection: 'column'}}>
                         <h3 style={{color: 'rgb(0, 174, 246)', marginTop: '0px'}}>Locación</h3>
                         <span 
-                            style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                             className={style.generalText}>
                             <IoLocation size={20} className={style.iconos}/> Barranquilla, Colombia</span>
                         <h3 style={{color: 'rgb(0, 174, 246)'}}>Número</h3>
                         <span 
-                            style={toggleColor ? { color: 'black', fontWeight: '600' } : null}
                             className={style.generalText}>
                             <HiOutlinePhone  size={20} className={style.iconos}/> +57 300 571 0921</span>
                     </div>

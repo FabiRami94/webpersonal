@@ -116,8 +116,12 @@ class Portafolios extends React.Component {
         const { toggleColor } = this.props;
 
         return (
-          <div className={styles.divPrincipal}>
-            <div className={styles.divGeneral}>
+          <div 
+            style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} 
+            className={styles.divPrincipal}>
+            <div 
+              style={toggleColor ? { backgroundColor: 'rgb(14, 18, 41, 0.8)'} : null}
+              className={styles.divGeneral}>
                 <div style={{height: '2rem'}} className={styles.divChange}>
                     <h1 className={`${styles.p3} ${!toggle && styles.transition}`}>
                         <span style={{color: 'white'}}>Mis</span>&nbsp;

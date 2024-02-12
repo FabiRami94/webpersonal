@@ -1,12 +1,10 @@
 
 import React, { useEffect, useState } from "react";
 import styles from './Skill.module.css';
-import { useSelector } from "react-redux";
 
 const Skill = ({image, name, icon, width}) => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const toggleColor = useSelector((state) => state.toggle.toogleButtonColorMode);
 
     useEffect(() => {
 
@@ -35,7 +33,6 @@ const Skill = ({image, name, icon, width}) => {
                 <img src={image}  style={{ width: handleImageWidth()}}/>
             </div>
             <h3 
-                style={toggleColor ? {color: 'black'} : null}  
                 className={styles.textStyle}>{name}</h3>   
         </div>
 
