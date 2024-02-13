@@ -39,11 +39,11 @@ const Home = () => {
                         {`Hey, I'm Fabián Ramírez`}
                       </h1>
                     </div>
-                    <h2 style={toggleColor ? { color: 'rgb(14, 18, 41)'} : null}>
-                        <span className={isNeon ? styles.spanNeon : styles.spanSinNeon}>UX/UI</span>&nbsp;
-                        <span style={{fontSize: '1.6rem'}} className={isNeon ? styles.spanNeon : styles.spanSinNeon}>Web Designer</span>&nbsp;
-                        <span style={toggleColor ? {textShadow} : null} className={styles.spanBlue}>& Full Stack Developer</span>
-                    </h2>
+                    <h1 style={toggleColor ? { color: 'rgb(14, 18, 41)'} : null}>
+                        {/* <span className={isNeon ? styles.spanNeon : styles.spanSinNeon}>UX/UI</span>&nbsp;
+                        <span style={{fontSize: '1.6rem'}} className={isNeon ? styles.spanNeon : styles.spanSinNeon}>Web Designer</span>&nbsp; */}
+                        <span style={toggleColor ? {textShadow} : null} className={styles.spanBlue}>Full Stack Developer</span>
+                    </h1>
                     <div className={styles.divTextoChange}>
                       <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                         {`Arquitecto de profesión, y aventurándome en el fascinante mundo de la tecnología. 

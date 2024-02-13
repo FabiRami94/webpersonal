@@ -19,7 +19,7 @@ export default function About () {
                     <h3 style={
                             toggleColor ? 
                             {textShadow, color: '#00AEF6', marginTop: '0.8rem'} : 
-                            {color: '#00AEF6', marginTop: '0.8rem'}}>UX/UI Web Designer & Full Stack Developer</h3>
+                            {color: '#00AEF6', marginTop: '0.8rem'}}>Full Stack Developer</h3>
                     <div className={styles.divTextoChange}>
                         <div className={`${styles.p1} ${!toggle && styles.transition}`}>
                             <p>
