@@ -2,7 +2,13 @@
 import React, { useEffect, useState } from "react"
 import styles from "./NavBar.module.css";
 import { Link } from 'react-scroll';
+
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { FaHome, FaUserAstronaut } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
+import { RiSlideshow4Fill } from "react-icons/ri";
+import { BiSolidMessageAltDetail } from "react-icons/bi";
+
 import './NavBar.module.css'
 import ToggleButtonLenguage from "../ToggleButtonLenguage/ToggleButtonLenguage";
 import { useSelector } from "react-redux";
@@ -27,15 +33,15 @@ const NavBar = () => {
         };
     }, []);
 
-    const handleTogglesWidth = (section) => {
-        if (windowWidth <= 768 && section === 'end') {
-            return 'none';
-        } else if(windowWidth >= 768 && section === 'start'){
-            return 'none';
-        } else{
-            return '';
-        }
-    };
+    // const handleTogglesWidth = (section) => {
+    //     if (windowWidth <= 768 && section === 'end') {
+    //         return 'none';
+    //     } else if(windowWidth >= 768 && section === 'start'){
+    //         return 'none';
+    //     } else{
+    //         return '';
+    //     }
+    // };
     
     const handleClick = () => {
       setClicked(!clicked)
@@ -65,13 +71,18 @@ const NavBar = () => {
                         to='home'
                         smooth={true}
                         offset={-120}
-                        duration={500}>     
-                            <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                        duration={500}>
+                            {windowWidth <= 768 ? <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                <FaHome size={20} style={{marginRight: '0.6rem'}}></FaHome>{`Inicio`}
+                            </p> : <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Inicio`}
-                            </p>
-                            <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            </p>}     
+                        
+                            {windowWidth <= 768 ? <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            <FaHome size={20} style={{marginRight: '0.6rem'}}></FaHome>{`Home`}
+                            </p> : <p className={`${styles.p2} ${toggle && styles.transition}`}>
                                 {`Home`}
-                            </p>            
+                            </p>}  
                     </Link>
                 </div>
                 <div 
@@ -84,12 +95,17 @@ const NavBar = () => {
                         smooth={true} 
                         offset={-120} 
                         duration={500}>
-                            <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                             {windowWidth <= 768 ? <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                <FaUserAstronaut size={20} style={{marginRight: '0.6rem'}}></FaUserAstronaut>{`Acerca/Experiencia`}
+                            </p> : <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Acerca/Experiencia`}
-                            </p>
-                            <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            </p>}     
+                        
+                            {windowWidth <= 768 ? <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            <FaUserAstronaut size={20} style={{marginRight: '0.6rem'}}></FaUserAstronaut>{`About/Experience`}
+                            </p> : <p className={`${styles.p2} ${toggle && styles.transition}`}>
                                 {`About/Experience`}
-                            </p> 
+                            </p>} 
                     </Link>
                 </div>
                 <div 
@@ -102,12 +118,17 @@ const NavBar = () => {
                         smooth={true} 
                         offset={-150} 
                         duration={500}>
-                            <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                            {windowWidth <= 768 ? <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                <FaComputer size={22} style={{marginRight: '0.6rem'}}></FaComputer>{`Habilidades`}
+                            </p> : <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Habilidades`}
-                            </p>
-                            <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            </p>}     
+                        
+                            {windowWidth <= 768 ? <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                                <FaComputer size={22} style={{marginRight: '0.6rem'}}></FaComputer>{`Skills`}
+                            </p> : <p className={`${styles.p2} ${toggle && styles.transition}`}>
                                 {`Skills`}
-                            </p> 
+                            </p>} 
                     </Link>
                 </div>
                 <div 
@@ -120,12 +141,17 @@ const NavBar = () => {
                         smooth={true} 
                         offset={-60} 
                         duration={500}>
-                            <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                            {windowWidth <= 768 ? <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                <RiSlideshow4Fill size={20} style={{marginRight: '0.6rem'}}></RiSlideshow4Fill>{`Portafolio`}
+                            </p> : <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Portafolio`}
-                            </p>
-                            <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            </p>}     
+                        
+                            {windowWidth <= 768 ? <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                                <RiSlideshow4Fill size={20} style={{marginRight: '0.6rem'}}></RiSlideshow4Fill>{`Portfolio`}
+                            </p> : <p className={`${styles.p2} ${toggle && styles.transition}`}>
                                 {`Portfolio`}
-                            </p> 
+                            </p>} 
                     </Link>
                 </div>
                 <div 
@@ -138,12 +164,17 @@ const NavBar = () => {
                         smooth={true} 
                         offset={-120} 
                         duration={500}>
-                            <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                            {windowWidth <= 768 ? <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                <BiSolidMessageAltDetail size={20} style={{marginRight: '0.6rem'}}></BiSolidMessageAltDetail>{`Contacto`}
+                            </p> : <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 {`Contacto`}
-                            </p>
-                            <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            </p>}     
+                        
+                            {windowWidth <= 768 ? <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                            <BiSolidMessageAltDetail size={20} style={{marginRight: '0.6rem'}}></BiSolidMessageAltDetail>{`Contact`}
+                            </p> : <p className={`${styles.p2} ${toggle && styles.transition}`}>
                                 {`Contact`}
-                            </p>
+                            </p>} 
                     </Link> 
                 </div>
                 <div className={styles.generalContainerIcon1}>

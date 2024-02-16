@@ -31,10 +31,14 @@ const Home = () => {
             <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} className={styles.divGeneral}>
                 <div style={toggleColor ? { color: 'black' } : null} className={styles.divTexto}>
                     <div  className={styles.divTitleChange}>
-                      <h1 style={{fontFamily: "Protest Riot", fontWeight: '400'}} className={`${styles.p1} ${!toggle && styles.transition}`}>
+                      <h1 
+                        style={{fontFamily: "Protest Riot", fontWeight: '400'}} 
+                        className={`${styles.p1} ${!toggle && styles.transition}`}>
                         {`Hey, soy Fabián Ramírez`}
                       </h1>
-                      <h1 style={{fontFamily: "Protest Riot", fontWeight: '400'}} className={`${styles.p2} ${toggle && styles.transition}`}>
+                      <h1 
+                        style={{fontFamily: "Protest Riot", fontWeight: '400'}} 
+                        className={`${styles.p2} ${toggle && styles.transition}`}>
                         {`Hey, I'm Fabián Ramírez`}
                       </h1>
                     </div>
