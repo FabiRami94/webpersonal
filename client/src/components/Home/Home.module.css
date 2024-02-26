@@ -27,19 +27,22 @@
     }
 
 .imagen {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 320/203;
+    object-fit: cover;
+  
 }
 
-    @media (max-width: 1080px) {
+    /* @media (max-width: 1080px) {
         .imagen{
             width: 300px;
             margin: 0px auto;
             margin-bottom: 10px;
         }
-    }
+    } */
 
 .divImagen {
-    border-radius: 30px;
     margin: 50px 100px 0px 0px;
 }
 

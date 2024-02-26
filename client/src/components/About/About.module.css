@@ -50,6 +50,7 @@
 
 .image {
     border-radius: 50px;
+    aspect-ratio: 95/119;
     border: 1px solid rgb(0, 174, 246);  
     z-index: 2;
 }
