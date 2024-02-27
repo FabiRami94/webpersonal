@@ -7,7 +7,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     /* background-color: rgb(9, 12, 24); */
   }
-  
+
+  p{
+    font-family: "PT Serif", serif;
+  }
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;

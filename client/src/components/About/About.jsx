@@ -15,7 +15,7 @@ export default function About () {
                     <img className={styles.image} src={'https://i.ibb.co/cYj6Lw6/Foto-profesional.jpg'} alt="PorfesionalImage"/>
                 </div>
                 <div style={toggleColor ? { color: 'black' } : null} className={styles.divTexto}>
-                    <h1 style={{marginBottom: '0'}}>Fabián Ramírez</h1>
+                    <h1 style={{fontFamily: "Protest Riot", fontWeight: '400', marginBottom: '0'}}>Fabián Ramírez</h1>
                     <h3 style={
                             toggleColor ? 
                             {textShadow, color: '#00AEF6', marginTop: '0.8rem'} : 
