@@ -42,7 +42,8 @@ const Home = () => {
                         {`Hey, I'm Fabián Ramírez`}
                       </h1>
                     </div>
-                    <h1 style={toggleColor ? { color: 'rgb(14, 18, 41)',fontFamily: "Protest Riot", fontWeight: '400' } : {fontFamily: "Protest Riot", fontWeight: '400'}}>
+                    <h1 style={toggleColor ? { color: 'rgb(14, 18, 41)',fontFamily: "Protest Riot", fontWeight: '400' } : {fontFamily: "Protest Riot", fontWeight: '400'}}
+                        className={styles.tituloSkill}>
                         {/* <span className={isNeon ? styles.spanNeon : styles.spanSinNeon}>UX/UI</span>&nbsp;
                         <span style={{fontSize: '1.6rem'}} className={isNeon ? styles.spanNeon : styles.spanSinNeon}>Web Designer</span>&nbsp; */}
                         <span style={toggleColor ? {textShadow} : null} className={styles.spanBlue}>Full Stack Developer</span>
