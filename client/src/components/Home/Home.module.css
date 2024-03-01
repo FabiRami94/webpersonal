@@ -13,7 +13,7 @@
     }
 
 .tituloSkill{ 
-    animation: 2s texto 0.2s ease-in-out;  
+    animation: 2s texto 0s ease-in-out;  
 }
     
     @keyframes texto {
@@ -45,7 +45,7 @@
     aspect-ratio: 320/203;
     object-fit: cover;
 
-    animation: 2s imagen 0.2s ease-in-out;  
+    animation: 2s imagen 0s ease-in-out;  
 }
 
     @keyframes imagen {
@@ -122,7 +122,7 @@
     position: relative;
     height: 3rem;
 
-    animation: 2s title 0.2s ease-in-out;  
+    animation: 2s title 0s ease-in-out;  
 }
 
     @keyframes title {
