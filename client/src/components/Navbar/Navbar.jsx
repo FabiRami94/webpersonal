@@ -116,7 +116,7 @@ const NavBar = () => {
                         className={styles.linksStyles} 
                         to='habilidades' 
                         smooth={true} 
-                        offset={-150} 
+                        offset={-120} 
                         duration={500}>
                             {windowWidth <= 768 ? <p className={`${styles.p1} ${!toggle && styles.transition}`}>
                                 <FaComputer size={22} style={{marginRight: '0.6rem'}}></FaComputer>{`Habilidades`}

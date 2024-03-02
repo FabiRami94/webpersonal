@@ -27,7 +27,7 @@ const Skills = () => {
 
     return(
         <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} >      
-            <div style={{height: '2rem', marginTop: '40px'}} className={styles.divChange}>
+            <div style={{height: '2rem', paddingTop: '6rem'}} className={styles.divChange}>
                 <h1 className={`${styles.p3} ${!toggle && styles.transition}`}>
                     <span style={!toggleColor ? {color: 'white'} : {color: 'black'}}>Mis</span>&nbsp;
                     <span style={
