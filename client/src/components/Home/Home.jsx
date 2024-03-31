@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import styles from './Home.module.css'
 import { useSelector } from "react-redux";
-import Divisor from "../Divisor/Divisor";
+import DividingLine from "../DividingLine/DividingLine.jsx";
 
 const Home = () => {
 
@@ -69,7 +69,13 @@ const Home = () => {
                     <img  className={styles.imagen} alt="PorfesionalImage" src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
                 </div>
             </body>                  
-            {/* <Divisor></Divisor> */}
+            <DividingLine 
+              toggleColor = {toggleColor}
+              pTop = {'30px'}
+              pTopResp = {'30px'}
+              pBottom = {'30px'}
+              pBottomResp = {'30px'}
+              ></DividingLine>
           </>
   )
 }

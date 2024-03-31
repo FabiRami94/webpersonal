@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 import { connect } from "react-redux";
+import DividingLine from "../DividingLine/DividingLine.jsx";
 
 class Portafolios extends React.Component {
 
@@ -116,101 +117,110 @@ class Portafolios extends React.Component {
         const { toggleColor } = this.props;
 
         return (
-          <div 
-            style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} 
-            className={styles.divPrincipal}>
+          <>
             <div 
-              style={toggleColor ? { backgroundColor: 'rgb(14, 18, 41, 0.8)'} : null}
-              className={styles.divGeneral}>
-                <div style={{height: '2rem'}} className={styles.divChange}>
-                    <h1 className={`${styles.p3} ${!toggle && styles.transition}`}>
-                        <span style={{color: 'white'}}>Mis</span>&nbsp;
-                        <span style={{color: '#00AEF6'}}>Proyectos</span>
-                    </h1>
-                    <h1 className={`${styles.p4} ${toggle && styles.transition}`}>
-                        <span style={{color: 'white'}}>My</span>&nbsp;
-                        <span style={{color: '#00AEF6'}}>Projects</span>
-                    </h1>
-                </div> 
-                <div style={{ display: "flex", flexDirection: "row", marginTop: '4rem' }}>
-                    <span
-                        id="Left1"
-                        onClick={this.onClickHandlerProyect}
-                        className={styles.flechaizquierda1}>&#8249;
-                    </span>
-                    <div className={styles.principalContainer}>
-                        <div className={styles.secondaryContainer}>
-                            <h2 style={{ color: 'white', margin: "5px", textAlign: "center" }}>
-                                {data[proyectCounter - 1].NAME}
-                            </h2>
-                            <div style={{height: '2rem'}} className={styles.divChange}>
-                              <p className={`${styles.p1} ${!toggle && styles.transition}`}>
-                                  {`Desliza para ver las imágenes de cada proyecto.`}
-                              </p>
-                              <p className={`${styles.p1} ${toggle && styles.transition}`}>
-                                {`Swipe to see the images of each project.`}
-                              </p>
-                            </div>
-                            <div>
-                                <Swiper 
-                                  pagination={{ 
-                                    clickable: true, 
-                                    el: '.swiper-pagination', 
-                                    type: 'bullets' }} 
-                                  modules={[Pagination]} 
-                                  className="mySwiper">
-                                  {data[proyectCounter - 1][`PROYECTO${proyectCounter}`].map(
-                                    (item) => (
-                                          <SwiperSlide key={item.id} >
-                                              <img
-                                                  className={styles.image}
-                                                  alt={`foto ${item.id}`}
-                                                  src={item.imgUrl}
-                                                  onLoad={this.handleImageLoad}
-                                              />
-                                          </SwiperSlide>
-                                      )
-                                  )}
-                                  <div className="swiper-pagination" style={{ bottom: '0px'}}></div>
-                                  <div style={{ paddingTop: '20px' }}></div>
-                                </Swiper>
-                            </div>
-                        </div>
-                    </div>
-                    <span
-                        id="Rigth1"
-                        onClick={this.onClickHandlerProyect}
-                        className={styles.flechaderecha1}>&#8250;
-                    </span>
-                </div>
-                <div style={{height: '4rem'}} className={styles.divChange}>
-                  <p className={`${styles.p2} ${!toggle && styles.transition}`}>
-                    {`Total de proyecto deployados: 2.`}
-                  </p>
-                  <p className={`${styles.p2} ${toggle && styles.transition}`}>
-                    {`Total deployed projects: 2.`}
-                  </p>
-                </div>         
-                <div className={styles.linkCards}>
-                  {projectTechnologies.map((proj) => (
-                    <WebLinks 
-                      key = {proj.id} 
-                      image = {proj.image}
-                      url = {proj.url}
-                      technologies = {proj.technologies}
-                    ></WebLinks>
-                  ))}
-                </div>
-                <div id="minor" style={{height: '2rem'}} className={styles.divChange}>
-                  <p style={{ transform: 'translate(-50%, -140%)'}} className={`${styles.p2} ${!toggle && styles.transition}`}>
-                    {`Oprima para apreciar las tecnologías usadas y visitar cada proyectos.`}
-                  </p>
-                  <p style={{ transform: 'translate(-50%, -140%)'}} className={`${styles.p2} ${toggle && styles.transition}`}>
-                    {`Click to see the technologies used and visit each project.`}
-                  </p>
-                </div>  
-            </div> 
-          </div>
+              style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} 
+              className={styles.divPrincipal}>
+              <div 
+                style={toggleColor ? { backgroundColor: 'rgb(14, 18, 41, 0.8)'} : null}
+                className={styles.divGeneral}>
+                  <div style={{height: '2rem'}} className={styles.divChange}>
+                      <h1 className={`${styles.p3} ${!toggle && styles.transition}`}>
+                          <span style={{color: 'white'}}>Mis</span>&nbsp;
+                          <span style={{color: '#00AEF6'}}>Proyectos</span>
+                      </h1>
+                      <h1 className={`${styles.p4} ${toggle && styles.transition}`}>
+                          <span style={{color: 'white'}}>My</span>&nbsp;
+                          <span style={{color: '#00AEF6'}}>Projects</span>
+                      </h1>
+                  </div> 
+                  <div style={{ display: "flex", flexDirection: "row", marginTop: '4rem' }}>
+                      <span
+                          id="Left1"
+                          onClick={this.onClickHandlerProyect}
+                          className={styles.flechaizquierda1}>&#8249;
+                      </span>
+                      <div className={styles.principalContainer}>
+                          <div className={styles.secondaryContainer}>
+                              <h2 style={{ color: 'white', margin: "5px", textAlign: "center" }}>
+                                  {data[proyectCounter - 1].NAME}
+                              </h2>
+                              <div style={{height: '2rem'}} className={styles.divChange}>
+                                <p className={`${styles.p1} ${!toggle && styles.transition}`}>
+                                    {`Desliza para ver las imágenes de cada proyecto.`}
+                                </p>
+                                <p className={`${styles.p1} ${toggle && styles.transition}`}>
+                                  {`Swipe to see the images of each project.`}
+                                </p>
+                              </div>
+                              <div>
+                                  <Swiper 
+                                    pagination={{ 
+                                      clickable: true, 
+                                      el: '.swiper-pagination', 
+                                      type: 'bullets' }} 
+                                    modules={[Pagination]} 
+                                    className="mySwiper">
+                                    {data[proyectCounter - 1][`PROYECTO${proyectCounter}`].map(
+                                      (item) => (
+                                            <SwiperSlide key={item.id} >
+                                                <img
+                                                    className={styles.image}
+                                                    alt={`foto ${item.id}`}
+                                                    src={item.imgUrl}
+                                                    onLoad={this.handleImageLoad}
+                                                />
+                                            </SwiperSlide>
+                                        )
+                                    )}
+                                    <div className="swiper-pagination" style={{ bottom: '0px'}}></div>
+                                    <div style={{ paddingTop: '20px' }}></div>
+                                  </Swiper>
+                              </div>
+                          </div>
+                      </div>
+                      <span
+                          id="Rigth1"
+                          onClick={this.onClickHandlerProyect}
+                          className={styles.flechaderecha1}>&#8250;
+                      </span>
+                  </div>
+                  <div style={{height: '4rem'}} className={styles.divChange}>
+                    <p className={`${styles.p2} ${!toggle && styles.transition}`}>
+                      {`Total de proyecto deployados: 2.`}
+                    </p>
+                    <p className={`${styles.p2} ${toggle && styles.transition}`}>
+                      {`Total deployed projects: 2.`}
+                    </p>
+                  </div>         
+                  <div className={styles.linkCards}>
+                    {projectTechnologies.map((proj) => (
+                      <WebLinks 
+                        key = {proj.id} 
+                        image = {proj.image}
+                        url = {proj.url}
+                        technologies = {proj.technologies}
+                      ></WebLinks>
+                    ))}
+                  </div>
+                  <div id="minor" style={{height: '2rem'}} className={styles.divChange}>
+                    <p style={{ transform: 'translate(-50%, -140%)'}} className={`${styles.p2} ${!toggle && styles.transition}`}>
+                      {`Oprima para apreciar las tecnologías usadas y visitar cada proyectos.`}
+                    </p>
+                    <p style={{ transform: 'translate(-50%, -140%)'}} className={`${styles.p2} ${toggle && styles.transition}`}>
+                      {`Click to see the technologies used and visit each project.`}
+                    </p>
+                  </div>  
+              </div> 
+            </div>
+            <DividingLine 
+              toggleColor = {toggleColor}
+              pTop = {'10px'}
+              pTopResp = {'15px'}
+              pBottom = {'30px'}
+              pBottomResp = {'0px'}
+              ></DividingLine>
+          </>
         )
     }
 }

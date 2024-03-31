@@ -1,0 +1,58 @@
+
+.space{
+    padding: 0px 40px;
+}
+
+.twinkle{
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(204, 204, 204);
+    align-items: center;
+    justify-content: center;
+
+    animation: 1.2s /*Duration*/ shine /*Name*/ 1s /*En cuanto inicia*/ ease-in-out; 
+    animation-fill-mode: forwards; /*Remain de changes*/
+}
+
+    @keyframes shine {
+        0%, 10%, 30%, 50%, 75%, 90% {
+            box-shadow: 0px 0px 0px rgb(9, 12, 24, 0.4);
+            background-color: rgb(204, 204, 204);
+        }
+        20%, 80%, 100% {
+            box-shadow: 0px 0px 8px rgb(9, 12, 24, 0.4);
+            background-color: rgb(9, 12, 24);
+        }
+        35%, 70%, 95% {
+            box-shadow: 0px 0px 4px rgb(9, 12, 24, 0.4);
+            background-color: rgb(9, 12, 24);
+        }
+    }
+
+.twinkleDark{
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(6, 6, 12);
+    align-items: center;
+    justify-content: center;
+
+    animation: 1.2s /*Duration*/ shineDark /*Name*/ 1s /*En cuanto inicia*/ ease-in-out; 
+    animation-fill-mode: forwards; /*Remain de changes*/
+}
+
+    @keyframes shineDark {
+        0%, 10%, 30%, 50%, 75%, 90% {
+            box-shadow: 0px 0px 0px white;
+            background-color: rgb(9, 12, 24, 0.4);
+        }
+        20%, 80%, 100% {
+            box-shadow: 0px 0px 8px white;
+            background-color: white;
+        }
+        35%, 70%, 95% {
+            box-shadow: 0px 0px 4px white;
+            background-color: white;
+        }
+    }
