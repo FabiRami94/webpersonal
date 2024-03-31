@@ -71,9 +71,9 @@ const Home = () => {
             </body>                  
             <DividingLine 
               toggleColor = {toggleColor}
-              pTop = {'30px'}
-              pTopResp = {'30px'}
-              pBottom = {'30px'}
+              pTop = {'20px'}
+              pTopResp = {'10px'}
+              pBottom = {'50px'}
               pBottomResp = {'30px'}
               ></DividingLine>
           </>
