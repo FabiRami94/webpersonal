@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react"
 import styles from './Home.module.css'
 import { useSelector } from "react-redux";
+import Divisor from "../Divisor/Divisor";
 
 const Home = () => {
 
@@ -28,6 +29,7 @@ const Home = () => {
       }, [toggle]);
 
     return(
+          <>
             <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} className={styles.divGeneral}>
                 <div style={toggleColor ? { color: 'black' } : null} className={styles.divTexto}>
                     <div  className={styles.divTitleChange}>
@@ -67,6 +69,8 @@ const Home = () => {
                     <img  className={styles.imagen} alt="PorfesionalImage" src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
                 </div>
             </body>                  
+            {/* <Divisor></Divisor> */}
+          </>
   )
 }
 
