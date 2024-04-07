@@ -1,0 +1,57 @@
+
+.general{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.ballDiv{
+    height: 5rem;
+    width: 5rem;
+    margin: 0.4rem;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center; 
+
+    animation: 1.5s ball 0s ease-in-out 2 /* Repeats */;
+}
+
+@keyframes ball {
+    50%{
+    transform: translateY(-4rem);
+    }
+    0%, 100% {
+    transform: translateY(0rem);
+    }
+}
+
+.ballDiv:nth-child(1) {
+    animation-delay: 0s; 
+}
+
+.ballDiv:nth-child(2) {
+    animation-delay: 0.2s; 
+}
+
+.ballDiv:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.ballDiv:nth-child(4) {
+    animation-delay: 0.6s; 
+}
+
+.ballDiv img{
+    height: 80%;  
+}
+
+.ballContainer{
+    height: 12.8rem;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 2rem;
+}
