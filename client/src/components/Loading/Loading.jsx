@@ -7,7 +7,7 @@ const Loading = () => {
         <>
             <div className={style.general}>
                 <img
-                    style={{height: '16rem'}} 
+                    className={style.logo} 
                     src="https://i.ibb.co/ZGF3qS3/Logo-propio-Blanco.png" 
                     alt='Logo Propio'/>
                 <div className={style.ballContainer}>
