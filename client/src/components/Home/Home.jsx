@@ -28,6 +28,25 @@ const Home = () => {
         };
       }, [toggle]);
 
+      //Parallax
+      useEffect(() => {
+        const handleMouseMove = (event) => {
+            const balls = document.querySelectorAll(`.${styles.imagen}`);
+            balls.forEach(ball => {
+                const speed = parseFloat(ball.getAttribute('data-speed'));
+                const xOffset = (window.innerWidth / 2 - event.clientX) * speed;
+                const yOffset = (window.innerHeight / 2 - event.clientY) * speed;
+                ball.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        };
+
+        document.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
     return(
           <>
             <body style={!toggleColor ? { backgroundColor: 'rgb(9, 12, 24)'} : null} className={styles.divGeneral}>
@@ -66,7 +85,12 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.divImagen}>
-                    <img  className={styles.imagen} alt="PorfesionalImage" src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
+                    <img  
+                      className={`${styles.imagen} ${styles.speed4}`}
+                      data-speed="0.04"
+                      // className={styles.imagen} 
+                      alt="PorfesionalImage" 
+                      src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
                 </div>
             </body>                  
             <DividingLine 
