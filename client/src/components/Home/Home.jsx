@@ -31,12 +31,12 @@ const Home = () => {
       //Parallax
       useEffect(() => {
         const handleMouseMove = (event) => {
-            const balls = document.querySelectorAll(`.${styles.imagen}`);
-            balls.forEach(ball => {
-                const speed = parseFloat(ball.getAttribute('data-speed'));
+            const images = document.querySelectorAll(`.${styles.imagen}`);
+            images.forEach(image => {
+                const speed = parseFloat(image.getAttribute('data-speed'));
                 const xOffset = (window.innerWidth / 2 - event.clientX) * speed;
                 const yOffset = (window.innerHeight / 2 - event.clientY) * speed;
-                ball.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                image.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
             });
         };
 
@@ -86,8 +86,8 @@ const Home = () => {
                 </div>
                 <div className={styles.divImagen}>
                     <img  
-                      className={`${styles.imagen} ${styles.speed4}`}
-                      data-speed="0.04"
+                      className={styles.imagen}
+                      data-speed="0.02"
                       // className={styles.imagen} 
                       alt="PorfesionalImage" 
                       src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
