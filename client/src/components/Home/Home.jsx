@@ -88,7 +88,6 @@ const Home = () => {
                     <img  
                       className={styles.imagen}
                       data-speed="0.02"
-                      // className={styles.imagen} 
                       alt="PorfesionalImage" 
                       src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
                 </div>
