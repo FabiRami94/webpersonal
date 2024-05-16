@@ -100,7 +100,7 @@ const Home = () => {
               pBottomResp = {'30px'}
               ></DividingLine>
           </>
-  )
+    )
 }
 
 export default Home;
