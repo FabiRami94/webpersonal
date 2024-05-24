@@ -50,6 +50,7 @@ export default function About () {
                         </div>
                     </div>
             </body> 
+            
             <DividingLine 
               toggleColor = {toggleColor}
               pTop = {'0px'}
