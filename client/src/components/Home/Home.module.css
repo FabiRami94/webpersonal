@@ -40,8 +40,8 @@
 
 .imagen {
     width: 100%;
-    max-width: 500px;
-    aspect-ratio: 320/203;
+    max-width: 600px;
+    /* aspect-ratio: 320/203; */
     object-fit: cover;
 
     animation: 2s imagen 0s ease-in-out;  
@@ -65,7 +65,7 @@
     } */
 
 .divImagen {
-    margin: 50px 100px 0px 0px;
+    margin: 100px 60px 0px 0px;
 }
 
     @media (max-width: 1080px) {

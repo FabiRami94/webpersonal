@@ -89,7 +89,7 @@ const Home = () => {
                       className={styles.imagen}
                       data-speed="0.02"
                       alt="PorfesionalImage" 
-                      src="https://i.ibb.co/TLZ5C3L/Rompecabezas.png"/>
+                      src="https://i.ibb.co/rMh2xwn/Panda-Sin-fondo.png"/>
                 </div>
             </body>                  
             <DividingLine 
