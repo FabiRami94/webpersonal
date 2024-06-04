@@ -12,7 +12,6 @@ const Home = () => {
     const textShadow = '1px 1px 2px black';
 
     useEffect(() => {
-
         const intervalId = setInterval(() => {
           setIsNeon((prevIsNeon) => !prevIsNeon);
         }, 120);
