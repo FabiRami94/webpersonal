@@ -79,14 +79,16 @@ const Home = () => {
                     </h1>
                     <div className={styles.divTextoChange}>
                       <p className={`${styles.p1} ${!toggle && styles.transition}`}>
-                        {`Arquitecto de profesión, y aventurándome en el fascinante mundo de la tecnología. 
-                          Apasionado por el aprendizaje continuo y el crecimiento constante. "Si solo haces
-                          lo que ya sabes hacer, no vas a llegar a ser más de lo que eres hoy" - 
+                        {`Apasionado por la programación y el diseño, busco fusionar la creatividad con la 
+                        eficiencia en cada proyecto. Te invito a explorar mi portafolio, donde cada línea 
+                        de código es una expresión de diseño y funcionalidad en constante evolución. "Si solo haces
+                        lo que ya sabes hacer, no vas a llegar a ser más de lo que eres hoy" - 
                           `}<p style={{fontFamily: 'Protest Revolution', display: 'inline'}}> Kung Fu Panda</p>
                       </p>
                       <p className={`${styles.p2} ${toggle && styles.transition}`}>
-                        {`Architect by profession, and venturing into the fascinating world of technology.
-                          Passionate about continuous learning and constant growth. "If you only do
+                        {`Passionate about programming and design, he seeks to merge creativity with efficiency 
+                        in each project. I invite you to explore my portfolio, where each line of code is an 
+                        expression of constantly evolving design and functionality. "If you only do
                           what you already know how to do, you will not become more than what you are today" -
                           `}<p style={{fontFamily: 'Protest Revolution', display: 'inline'}}> Kung Fu Panda</p>
                       </p>
