@@ -44,6 +44,8 @@
     /* aspect-ratio: 320/203; */
     object-fit: cover;
 
+    transition: opacity 2s ease-in-out; 
+
     animation: 2s imagen 0s ease-in-out;  
 }
 

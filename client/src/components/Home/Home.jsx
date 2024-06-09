@@ -6,6 +6,7 @@ import DividingLine from "../DividingLine/DividingLine.jsx";
 
 const Home = () => {
 
+    const [hoverPanda, setHoverPanda] = useState(false);
     const [isNeon, setIsNeon] = useState(true);
     const toggle = useSelector((state) => state.toggle.toogleButtonLenguage);
     const toggleColor = useSelector((state) => state.toggle.toogleButtonColorMode);
@@ -26,6 +27,14 @@ const Home = () => {
           clearTimeout(timeoutId);
         };
       }, [toggle]);
+
+      const handleMouseEnter = () => {
+        setHoverPanda(true);
+      };
+
+      const handleMouseLeave = () => {
+        setHoverPanda(false);
+      };
 
       //Parallax
       useEffect(() => {
@@ -84,11 +93,16 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.divImagen}>
-                    <img  
+                    <img 
+                      onMouseEnter={handleMouseEnter} 
+                      onMouseLeave={handleMouseLeave}
                       className={styles.imagen}
                       data-speed="0.02"
-                      alt="PorfesionalImage" 
-                      src="https://i.ibb.co/rMh2xwn/Panda-Sin-fondo.png"/>
+                      alt="PorfesionalImage"
+                      src={hoverPanda ? 
+                        "https://i.ibb.co/rMh2xwn/Panda-Sin-fondo.png" : 
+                        "https://i.ibb.co/1QSS3Xh/Proceso-Panda-2-Sin-dedo.png"}
+                      />
                 </div>
             </body>                  
             <DividingLine 
