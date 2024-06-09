@@ -94,6 +94,9 @@ const Home = () => {
                 </div>
                 <div className={styles.divImagen}>
                     <img 
+                      style={{ filter: toggleColor ? 
+                        'drop-shadow(10px -5px 6px rgba(0,0,0,0.8))' : 
+                        'drop-shadow(10px -5px 6px rgba(250,250,250,0.4))' }} 
                       onMouseEnter={handleMouseEnter} 
                       onMouseLeave={handleMouseLeave}
                       className={styles.imagen}
