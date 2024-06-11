@@ -38,6 +38,12 @@
         }
     }
 
+    @media (max-width: 768px) {
+        .divTexto{
+            height: 360px;
+        }
+    }
+
 .imagen {
     width: 100%;
     max-width: 600px;
