@@ -192,14 +192,18 @@ export default function Contact () {
                     <div style={{
                         display: 'flex', 
                         flexDirection: 'column'}}>
-                        <h3 style={{color: 'rgb(0, 174, 246)', marginTop: '0px'}}>Locación</h3>
+                        <h3 style={{color: 'rgb(0, 174, 246)', marginTop: '0px'}}>Nationality</h3>
                         <span 
                             className={style.generalText}>
-                            <IoLocation size={20} className={style.iconos}/> Barranquilla, Colombia</span>
+                            <IoLocation size={20} className={style.iconos}/> Colombia</span>
+                        <h3 style={{color: 'rgb(0, 174, 246)'}}>Locación</h3>
+                        <span 
+                            className={style.generalText}>
+                            <IoLocation size={20} className={style.iconos}/> Dubai, United Emirates Arab</span>
                         <h3 style={{color: 'rgb(0, 174, 246)'}}>Número</h3>
                         <span 
                             className={style.generalText}>
-                            <HiOutlinePhone  size={20} className={style.iconos}/> +57 300 571 0921</span>
+                            <HiOutlinePhone  size={20} className={style.iconos}/> +971 58 108 5856</span>
                     </div>
                 </div>
             </div>
